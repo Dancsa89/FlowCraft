@@ -1,3 +1,5 @@
+import table.GameTable;
+
 public class Main {
     public static void main(String[] args) {
 
