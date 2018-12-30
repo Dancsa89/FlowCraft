@@ -39,14 +39,14 @@ public class GameTable {
     }
 
     public String toString() {
-        String resultArea = "";
+        String gameTable = "";
 
         for (int i = 0; i < gameField.length; i++) {
             for (int j = 0; j < gameField[i].length; j++) {
-                    resultArea += ' ' + gameField[i][j].toString();
+                    gameTable += ' ' + gameField[i][j].toString();
             }
-                resultArea += "\n";
+                gameTable += "\n";
         }
-        return resultArea;
+        return gameTable;
     }
 }

@@ -3,5 +3,5 @@ package buildings;
 public class Barrack {
 
     private int life = 2500;
-    private int price = 75;
+    private final int price = 75;
 }
