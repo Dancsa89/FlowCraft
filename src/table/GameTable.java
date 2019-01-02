@@ -38,6 +38,10 @@ public class GameTable {
         }
     }
 
+    public GameTableCell getCell(int i, int j) {
+        return gameField[i][j];
+    }
+
     public String toString() {
         String gameTable = "";
 
