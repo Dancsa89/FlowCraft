@@ -42,6 +42,10 @@ public class GameTable {
         return gameField[i][j];
     }
 
+    public int getSize() {
+        return size;
+    }
+
     public String toString() {
         String gameTable = "";
 

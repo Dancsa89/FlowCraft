@@ -1,34 +1,47 @@
 import table.GameTable;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class FlowCraftGUI extends JFrame {
 
+    GameTable gameTable;
     JButton[][] buttons;
-    GameTable gameTable = new GameTable();
 
     public FlowCraftGUI() {
         setTitle("FlowCraft");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLayout(null);
-        setSize(800, 800);
+        setSize(1000, 800);
         setLocationRelativeTo(null);
+        /* JPanel root = new JPanel();
 
-        final int size = 10;
+        root.setLayout(null);
+        add(root); */
 
-        JPanel content = new JPanel();
-
-        buttons = new JButton[size][size];
-        for (int i = 0; i < size; ++i) {
-            for (int j = 0; j < size; ++j) {
+        gameTable = new GameTable();
+        buttons = new JButton[gameTable.getSize()][gameTable.getSize()];
+        for (int i = 0; i < gameTable.getSize(); i++) {
+            for (int j = 0; j < gameTable.getSize(); j++) {
                 JButton btn = new JButton();
-                content.add(btn);
                 buttons[i][j] = btn;
+                btn.setBounds(
+                        10 + j * 12,
+                        10 + i * 12,
+                        12,
+                        12);
+                btn.setFont(new Font("Arial", Font.PLAIN, 10));
+                btn.getInsets(new Insets(0, 0, 0, 0));
+                add(btn);
             }
-
         }
-        add(content);
         drawTable();
+
+     /*   JLabel playerName = new JLabel();
+        Player player = new Player("Dani");
+        String name = player.getName();
+        playerName.setText(name);
+        add(playerName); */
     }
 
     private void drawTable() {
@@ -36,8 +49,6 @@ public class FlowCraftGUI extends JFrame {
             for (int j = 0; j < buttons[i].length; j++) {
                 buttons[i][j].setText(gameTable.getCell(i, j).toString());
             }
-
         }
-
     }
 }

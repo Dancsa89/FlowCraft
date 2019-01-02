@@ -9,4 +9,8 @@ public class Player {
     public Player(String name) {
         this.name = "Lord" + name;
     }
+
+    public String getName() {
+        return "Lord" + name;
+    }
 }
