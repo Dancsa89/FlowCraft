@@ -1,6 +1,8 @@
 package species.units;
 
-public class Healer {
+import table.GameTableCell;
+
+public class Healer extends GameTableCell {
 
     private final int price = 40;
     private int life = 150;

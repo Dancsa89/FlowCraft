@@ -4,14 +4,15 @@ import species.Hero;
 
 public class GameTable {
 
-    private final int size = 40;
+    private final int size = 20;
     private GameTableCell[][] gameField;
 
     public GameTable() {
         gameField = new GameTableCell[size][size];
-        addHero(0, 39);
-        addHero(39, 0);
+        addHero(0, 19);
+        addHero(19, 0);
         fillTable();
+
     }
 
     public void addHero(int first, int second) {

@@ -1,6 +1,8 @@
 package species.units;
 
-public class Catapult {
+import table.GameTableCell;
+
+public class Catapult extends GameTableCell {
 
     private final int price = 75;
     private int life = 750;
