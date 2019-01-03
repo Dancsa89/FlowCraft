@@ -51,7 +51,7 @@ public class FlowCraftGUI extends JFrame implements ActionListener {
 
         JLabel playerStatistics = new JLabel();
         playerStatistics.setText(player.unitsAndBuildings.toString());
-        playerStatistics.setBounds(800, 50, 80, 80);
+        playerStatistics.setBounds(700, 50, 500, 100);
         add(playerStatistics);
 
         JTextField details = new JTextField();
