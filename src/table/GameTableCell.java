@@ -29,6 +29,6 @@ public class GameTableCell {
                 return "B";
             }
         }
-        return "0";
+        return " ";
     }
 }

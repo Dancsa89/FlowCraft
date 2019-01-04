@@ -15,7 +15,6 @@ public class Player implements Build {
     private String name;
     private int gold = 200;
     public List<GameTableCell> unitsAndBuildings;
-    GameTable gameTable = new GameTable();
 
     public Player(String name) {
         this.name = "Lord" + " " + name;
@@ -41,10 +40,10 @@ public class Player implements Build {
     } */
 
     @Override
-    public void addBuilding(int first, int second) {
+    public void addBuilding(GameTable gameTable, int first, int second) {
         GameTableCell cell = gameTable.getCell(first, second);
         cell.setOccupied(true);
-        cell.setBuilding(true);
+        cell.setUnit(true);
         cell.setValue(3);
     }
 }

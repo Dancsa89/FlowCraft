@@ -1,4 +1,5 @@
 import buildings.TownHall;
+import species.units.Bowman;
 import table.GameTable;
 
 import javax.swing.*;
@@ -35,7 +36,7 @@ public class FlowCraftGUI extends JFrame implements ActionListener {
                 buttons[i][j] = btn;
                 btn.setBounds(
                         20 + j * 50,
-                        20 + i * 55,
+                        50 + i * 55,
                         50,
                         50);
                 btn.setFont(new Font("Arial", Font.BOLD, 15));
@@ -96,6 +97,7 @@ public class FlowCraftGUI extends JFrame implements ActionListener {
                 buttons[i][j].setText(gameTable.getCell(i, j).toString());
             }
         }
+        repaint();
     }
 
     @Override
@@ -105,7 +107,7 @@ public class FlowCraftGUI extends JFrame implements ActionListener {
         int a = Integer.parseInt(array[0]);
         int b = Integer.parseInt(array[1]);
         if (buttons[a][b] != null) {
-           player.addBuilding(a, b);
+           player.addBuilding(gameTable, a, b);
            player.unitsAndBuildings.add(new TownHall());
            drawTable();
         }

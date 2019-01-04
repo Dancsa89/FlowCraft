@@ -1,7 +1,9 @@
 package interfaces;
 
+import table.GameTable;
+
 public interface Build {
 
-    void addBuilding(int first, int second);
+    void addBuilding(GameTable gameTable, int first, int second);
 }
 
