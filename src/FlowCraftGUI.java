@@ -1,3 +1,4 @@
+import buildings.TownHall;
 import table.GameTable;
 
 import javax.swing.*;
@@ -9,6 +10,11 @@ public class FlowCraftGUI extends JFrame implements ActionListener {
 
     GameTable gameTable;
     JButton[][] buttons;
+    Player player = new Player("Dani");
+    JButton attack;
+    JButton buyUnit;
+    JButton build;
+    JButton endRound;
 
     public FlowCraftGUI() {
         setTitle("FlowCraft");
@@ -28,12 +34,12 @@ public class FlowCraftGUI extends JFrame implements ActionListener {
                 JButton btn = new JButton();
                 buttons[i][j] = btn;
                 btn.setBounds(
-                        20 + j * 30,
-                        20 + i * 30,
-                        30,
-                        30);
-                btn.setFont(new Font("Arial", Font.PLAIN, 15));
-                btn.getInsets(new Insets(0, 0, 0, 0));
+                        20 + j * 50,
+                        20 + i * 55,
+                        50,
+                        50);
+                btn.setFont(new Font("Arial", Font.BOLD, 15));
+                //btn.getInsets(new Insets(0, 0, 0, 0));
                 add(btn);
                 btn.setActionCommand(i + " " + j);
                 btn.addActionListener(this);
@@ -41,22 +47,46 @@ public class FlowCraftGUI extends JFrame implements ActionListener {
         }
         drawTable();
 
+        attack = new JButton();
+        attack.setBounds(680,440, 150,40);
+        attack.setText("Attack");
+        add(attack);
+
+        buyUnit = new JButton();
+        buyUnit.setBounds(680,480, 150,40);
+        buyUnit.setText("Buy Unit");
+        add(buyUnit);
+
+        build = new JButton();
+        build.setBounds(680,520, 150,40);
+        build.setText("Build");
+        add(build);
+
+        endRound = new JButton();
+        endRound.setBounds(680,560, 150,40);
+        endRound.setText("End Round");
+        add(endRound);
+
         JLabel playerName = new JLabel();
-        Player player = new Player("Dani");
         String name = player.getName();
         playerName.setText(name);
         playerName.setFont(new Font("Arial", Font.BOLD, 12));
-        playerName.setBounds(800, 5, 80, 80);
+        playerName.setBounds(720, 2, 80, 80);
         add(playerName);
 
-        JLabel playerStatistics = new JLabel();
+        JLabel statistic = new JLabel();
+        statistic.setFont(new Font("Arial", Font.BOLD, 12));
+        statistic.setBounds(700, 30, 150, 150);
+        statistic.setText("Player Statistic");
+        add(statistic);
+
+        JTextField playerStatistics = new JTextField();
         playerStatistics.setText(player.unitsAndBuildings.toString());
-        playerStatistics.setBounds(700, 50, 500, 100);
+        playerStatistics.setBounds(550, 120, 410, 100);
         add(playerStatistics);
 
         JTextField details = new JTextField();
-        details.setBounds(725, 200, 200, 80);
-
+        details.setBounds(550, 300, 410, 100);
         add(details);
     }
 
@@ -75,9 +105,9 @@ public class FlowCraftGUI extends JFrame implements ActionListener {
         int a = Integer.parseInt(array[0]);
         int b = Integer.parseInt(array[1]);
         if (buttons[a][b] != null) {
-            buttons[a][b].setBackground(Color.RED);
-            String detalis = gameTable.getCell(a, b).toString();
-            System.out.println(detalis);
+           player.addBuilding(a, b);
+           player.unitsAndBuildings.add(new TownHall());
+           drawTable();
         }
     }
 }

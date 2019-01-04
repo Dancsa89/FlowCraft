@@ -2,6 +2,6 @@ package interfaces;
 
 public interface Build {
 
-    void addBuilding();
+    void addBuilding(int first, int second);
 }
 
