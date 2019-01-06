@@ -48,25 +48,61 @@ public class FlowCraftGUI extends JFrame implements ActionListener {
         }
         drawTable();
 
-        attack = new JButton();
-        attack.setBounds(680,440, 150,40);
+       /* attack = new JButton();                 Probably and don't have to use this
+        attack.setBounds(680, 440, 150, 40);
         attack.setText("Attack");
         add(attack);
+        attack.setActionCommand("attack");
+        attack.addActionListener(this); */
+
 
         buyUnit = new JButton();
-        buyUnit.setBounds(680,480, 150,40);
+        buyUnit.setBounds(680, 480, 150, 40);
         buyUnit.setText("Buy Unit");
         add(buyUnit);
+        buyUnit.setActionCommand("buy");
+        buyUnit.addActionListener(
+                new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        String command = e.getActionCommand();
+                        if (command == "buy") {
+                            System.out.println("Megnyomtak");
+                        }
+                    }
+                }
+        );
 
         build = new JButton();
-        build.setBounds(680,520, 150,40);
-        build.setText("Build");
+        build.setBounds(680, 520, 150, 40);
+        build.setText("Building");
         add(build);
+        build.setActionCommand("build");
+        build.addActionListener(
+                new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        String command = e.getActionCommand();
+                        if (command == "build") {
+                            System.out.println("Megnyomtak engem is");
+                        }
+                    }
+                }
+        );
 
         endRound = new JButton();
-        endRound.setBounds(680,560, 150,40);
+        endRound.setBounds(680, 560, 150, 40);
         endRound.setText("End Round");
         add(endRound);
+        endRound.setActionCommand("end");
+        endRound.addActionListener(
+                new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        String command = e.getActionCommand();
+                        if (command == "end") {
+                            System.out.println("Engem meg sőőőőt");
+                        }
+                    }
+                }
+        );
 
         JLabel playerName = new JLabel();
         String name = player.getName();
@@ -107,9 +143,10 @@ public class FlowCraftGUI extends JFrame implements ActionListener {
         int a = Integer.parseInt(array[0]);
         int b = Integer.parseInt(array[1]);
         if (buttons[a][b] != null) {
-           player.addBuilding(gameTable, a, b);
-           player.unitsAndBuildings.add(new TownHall());
-           drawTable();
+            player.addBuilding(gameTable, a, b);
+            player.unitsAndBuildings.add(new TownHall());
+            drawTable();
         }
+
     }
 }

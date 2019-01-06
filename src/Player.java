@@ -1,16 +1,10 @@
-import interfaces.Build;
-import interfaces.Buying;
-import species.units.Bowman;
-import species.units.Catapult;
-import species.units.Healer;
 import table.GameTable;
 import table.GameTableCell;
 
 import java.util.ArrayList;
-import java.util.GregorianCalendar;
 import java.util.List;
 
-public class Player implements Build {
+public class Player {
 
     private String name;
     private int gold = 200;
@@ -34,16 +28,17 @@ public class Player implements Build {
         return elementsOfTheList;
     }
 
-   /* @Override
-    public void addUnit(int first, int second) {
-
-    } */
-
-    @Override
-    public void addBuilding(GameTable gameTable, int first, int second) {
+    public void addUnit(GameTable gameTable, int first, int second) {
         GameTableCell cell = gameTable.getCell(first, second);
         cell.setOccupied(true);
         cell.setUnit(true);
+        cell.setValue(2);
+    }
+
+    public void addBuilding(GameTable gameTable, int first, int second) {
+        GameTableCell cell = gameTable.getCell(first, second);
+        cell.setOccupied(true);
+        cell.setBuilding(true);
         cell.setValue(3);
     }
 }
