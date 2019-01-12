@@ -1,15 +1,29 @@
 package species.units;
 
-import table.GameTableCell;
+import interfaces.Player;
 
 public class Bowman extends GameTableCell {
 
-    private String name = "Bowman";
     private final int price = 15;
     private int life = 250;
     private final int damage = 25;
 
-    public String toString() {
-        return "Name:" + " " + name + "\n" + "Life:" + " " + life;
+    public Bowman(Player owner) {
+        super(owner, "Bowman");
+    }
+
+    @Override
+    public boolean isMovable() {
+        return true;
+    }
+
+    @Override
+    public int maxStep() {
+        return 2;
+    }
+
+    @Override
+    public boolean canMoveOutOfAxis() {
+        return true;
     }
 }

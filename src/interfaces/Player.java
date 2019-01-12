@@ -1,22 +1,19 @@
 package interfaces;
 
-import table.GameTable;
-import table.GameTableCell;
+import species.units.GameTableCell;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Player extends GameTableCell {
+public class Player  {
 
     private String name;
+    private int goods = 200;
 
     public Player(String name) {
-        this.name = name;
+        this.name = "Lord " + name;
     }
 
-    public String getTitle() {
-        return name;
-    }
+    public int getGoods() { return goods; }
+
+    public String getName() { return name; }
 
     @Override
     public String toString() {

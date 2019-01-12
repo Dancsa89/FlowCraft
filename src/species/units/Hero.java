@@ -1,15 +1,17 @@
 package species.units;
 
 import interfaces.Player;
+import species.units.GameTableCell;
 
-public class Warrior extends GameTableCell {
+public class Hero extends GameTableCell {
 
-    private final int price = 25;
-    private int life = 500;
-    private final int damage = 50;
+    private int life = 800;
+    private int attack = 60;
+    private String type;
+    private final int value = 1;
 
-    public Warrior(Player owner) {
-        super(owner, "Warrior");
+    public Hero(Player owner) {
+        super(owner, "Heroe");
     }
 
     @Override

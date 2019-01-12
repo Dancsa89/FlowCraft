@@ -1,20 +1,20 @@
 import interfaces.Player;
 import interfaces.Position;
+import interfaces.Range;
 import interfaces.TableContract;
-import table.GameTableCell;
+import species.units.GameTableCell;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
 
     private ActionListener actionListener;
     private TableContract.Presenter presenter;
-    private JPanel root;
-    JButton buyUnit;
-    JButton build;
-    JButton endRound;
+    private JPanel layoutButtons;
+    private JPanel layoutPlayers;
 
     public FlowCraftGUI() {
         setTitle("FlowCraft");
@@ -22,9 +22,21 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
         setSize(1000, 800);
         setLocationRelativeTo(null);
 
-        root = new JPanel();
+        JPanel root = new JPanel();
         root.setLayout(null);
         add(root);
+
+        layoutButtons = new JPanel();
+        layoutButtons.setBounds(0, 0, 550, 700);
+        layoutButtons.setBackground(Color.LIGHT_GRAY);
+        layoutButtons.setLayout(null);
+        root.add(layoutButtons);
+
+        layoutPlayers = new JPanel();
+        layoutPlayers.setBounds(700, 80, 150, 100);
+        layoutPlayers.setBackground(Color.LIGHT_GRAY);
+        layoutPlayers.setLayout(new GridLayout(3, 1));
+        root.add(layoutPlayers);
 
         actionListener = e -> {
             String[] s = e.getActionCommand().split(" ");
@@ -37,28 +49,11 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
 
         presenter = new Game(this);
 
-        buyUnit = new JButton();
-        buyUnit.setBounds(680,480,150,40);
-        buyUnit.setText("Buy Unit");
-
-        root.add(buyUnit);
-        buyUnit.setActionCommand("buy");
-
-        build = new JButton();
-        build.setBounds(680, 520, 150, 40);
-        build.setText("Building");
-        root.add(build);
-        build.setActionCommand("build");
-
-        endRound = new JButton();
-        endRound.setBounds(680, 560, 150, 40);
-        endRound.setText("End Round");
-        root.add(endRound);
     }
 
     @Override
     public void showTable(GameTableCell[][] gameField) {
-        root.removeAll();
+        layoutButtons.removeAll();
 
         for (int i = 0; i < gameField.length; i++) {
             for (int j = 0; j < gameField[i].length; j++) {
@@ -71,7 +66,7 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
                         50 + i * 55,
                         50,
                         50);
-                root.add(btn);
+                layoutButtons.add(btn);
                 btn.setOpaque(true);
                 GameTableCell player = gameField[i][j];
                 if (player != null) {
@@ -83,64 +78,76 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
 
     @Override
     public void setSelection(Position position, boolean selection) {
-        Component component = root.getComponent(position.x * 10 + position.y);
+        Component component = layoutButtons.getComponent(position.x * 10 + position.y);
 
         component.setBackground(selection ? Color.RED : null);
     }
 
     @Override
-    public void updatePlayer(Position position, GameTableCell unit) {
-        JButton btn = (JButton) root.getComponent(position.x * 10 + position.y);
+    public void updateCellItem(Position position, GameTableCell CellItem) {
+        JButton btn = (JButton) layoutButtons.getComponent(position.x * 10 + position.y);
 
-        btn.setText(unit != null ? unit.toString() : null);
+        btn.setText(CellItem != null ? CellItem.toString() : null);
+    }
+
+    @Override
+    public int selectFromList(String[] list) {
+        return JOptionPane.showOptionDialog(
+                null,
+                "Mit vásárolsz?",
+                "Cím",
+                0,
+                JOptionPane.INFORMATION_MESSAGE,
+                null,
+                list,
+                null);
+    }
+
+    @Override
+    public void showPlayers(List<Player> players) {
+        layoutPlayers.removeAll();
+
+        for (Player player : players) {
+            layoutPlayers.add(new Label(player.getName()));
+        }
+    }
+
+    @Override
+    public void selectCurrentPlayer(Player player) {
+        for (int i = 0; i < layoutPlayers.getComponentCount(); i++) {
+            Label component = (Label) layoutPlayers.getComponent(i);
+
+            if (component.getText().equals(player.getName())) {
+                component.setBackground(Color.GREEN);
+            } else {
+                component.setBackground(null);
+            }
+        }
+
+        layoutPlayers.repaint();
+    }
+
+    @Override
+    public void highlightRange(Range range, Position center) {
+        for (int i = range.topLeft.x; i <= range.bottomRight.x; i++) {
+            for (int j = range.topLeft.y; j <= range.bottomRight.y; j++) {
+                if (center == null ||
+                        center.x == i || center.y == j) {
+                    int index = i * 10 + j;
+                    ((JButton) layoutButtons.getComponent(index))
+                            .setBorder(BorderFactory.createLineBorder(Color.green));
+                }
+            }
+        }
+    }
+
+    @Override
+    public void removeHighlight() {
+        for (int i = 0; i < layoutButtons.getComponentCount(); i++) {
+            ((JButton) layoutButtons.getComponent(i))
+                    .setBorder(BorderFactory.createLineBorder(Color.white));
+        }
     }
 }
 
-    /*  gameTable = new GameTable();
-        buttons = new JButton[gameTable.getSize()][gameTable.getSize()];
-        for (int i = 0; i < gameTable.getSize(); i++) {
-            for (int j = 0; j < gameTable.getSize(); j++) {
-                JButton btn = new JButton();
-                buttons[i][j] = btn;
-                btn.setBounds(
-                        20 + j * 50,
-                        50 + i * 55,
-                        50,
-                        50);
-                btn.setFont(new Font("Arial", Font.BOLD, 15));
-                btn.getInsets(new Insets(5, 5, 5, 5));
-                add(btn);
-                btn.setActionCommand(i + " " + j);
-                btn.addActionListener(this);
-            }
-        }
-        drawTable(); */
 
-    /*
-    private void drawTable() {
-        for (int i = 0; i < buttons.length; i++) {
-            for (int j = 0; j < buttons[i].length; j++) {
-                buttons[i][j].setText(gameTable.getCell(i, j).toString());
-            }
-        }
-        repaint();
-    }
-
-   /* @Override
-    public void actionPerformed(ActionEvent btn) {
-        String button = btn.getActionCommand();
-        String[] array = button.split(" ");
-        int a = Integer.parseInt(array[0]);
-        int b = Integer.parseInt(array[1]);
-        if (buttons[a][b] != null) {
-            gameTable.getCell(a, b).setSelected(true);
-            buttons[a][b].setBackground(Color.GREEN);
-            if (gameTable.getCell(a, b).isOccupied() && gameTable.getCell(a, b).isUnit()) {
-
-            }
-            // player.addBuilding(gameTable, a, b);
-           // player.unitsAndBuildings.add(new TownHall());
-            drawTable();
-        }
-
- */
