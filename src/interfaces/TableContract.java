@@ -10,6 +10,8 @@ public interface TableContract {
         void setSelection(Position position, boolean selection);
         void updateCellItem(Position position, GameTableCell CellItem);
         int selectFromList(String[] list);
+        int selectFromUnitList(String[] list);
+        int selectFromBuildingList(String[] list);
         void showPlayers(List<Player> players);
         void selectCurrentPlayer(Player player);
 

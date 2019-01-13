@@ -66,6 +66,7 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
                         50 + i * 55,
                         50,
                         50);
+                btn.setBackground(Color.LIGHT_GRAY);
                 layoutButtons.add(btn);
                 btn.setOpaque(true);
                 GameTableCell player = gameField[i][j];
@@ -94,7 +95,33 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
     public int selectFromList(String[] list) {
         return JOptionPane.showOptionDialog(
                 null,
-                "Mit vásárolsz?",
+                "What do you want to do?",
+                "Cím",
+                0,
+                JOptionPane.INFORMATION_MESSAGE,
+                null,
+                list,
+                null);
+    }
+
+    @Override
+    public int selectFromUnitList(String[] list) {
+        return JOptionPane.showOptionDialog(
+                null,
+                "Which building do you want to buy?",
+                "Cím",
+                0,
+                JOptionPane.INFORMATION_MESSAGE,
+                null,
+                list,
+                null);
+    }
+
+    @Override
+    public int selectFromBuildingList(String[] list) {
+        return JOptionPane.showOptionDialog(
+                null,
+                "Which unit do you want to buy?",
                 "Cím",
                 0,
                 JOptionPane.INFORMATION_MESSAGE,

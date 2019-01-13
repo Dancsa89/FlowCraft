@@ -1,3 +1,4 @@
+import buildings.*;
 import interfaces.Player;
 import interfaces.Position;
 import interfaces.Range;
@@ -43,7 +44,7 @@ public class Game implements TableContract.Presenter { // PRESENTER
                     nextPlayer();
                 }
             } else {
-                addNewItem(position);
+                choice(position);
                 nextPlayer();
             }
         }
@@ -104,17 +105,36 @@ public class Game implements TableContract.Presenter { // PRESENTER
         view.removeHighlight();
     }
 
-    private void addNewItem(Position position) {
-        String[] list = {"Bowman", "Catapult", "Healer", "Warrior"};
-        int choice = view.selectFromList(list);
+    private void choice(Position position) {
+        String[] list1 = { "Buy a Building", "Buy a Unit"};
 
+        int choiceBetween = view.selectFromList(list1);
+
+        switch (choiceBetween) {
+            case 0: addNewBuilding(position); break;
+            case 1: addNewUnit(position); break;
+        }
+    }
+
+    public void addNewUnit(Position position) {
+        String[] list = { "Bowman", "Catapult", "Healer", "Warrior" };
+        int choiceUnit = view.selectFromUnitList(list);
         GameTableCell cellItem = null;
         Player currentPlayer = mainTable.getCurrentPlayer();
-        switch (choice) {
-            case 0: cellItem = new Bowman(currentPlayer); break;
-            case 1: cellItem = new Catapult(currentPlayer); break;
-            case 2: cellItem = new Healer(currentPlayer); break;
-            case 3: cellItem = new Warrior(currentPlayer); break;
+
+        switch (choiceUnit) {
+            case 0:
+                cellItem = new Bowman(currentPlayer);
+                break;
+            case 1:
+                cellItem = new Catapult(currentPlayer);
+                break;
+            case 2:
+                cellItem = new Healer(currentPlayer);
+                break;
+            case 3:
+                cellItem = new Warrior(currentPlayer);
+                break;
         }
 
         if (cellItem != null) {
@@ -124,4 +144,35 @@ public class Game implements TableContract.Presenter { // PRESENTER
         }
     }
 
+    public void addNewBuilding(Position position) {
+        String[] list = {"Farm", "Barrack", "Tower", "Bank", "Townhall"};
+        int choiceBuilding = view.selectFromBuildingList(list);
+        GameTableCell cellItem = null;
+        Player currentPlayer = mainTable.getCurrentPlayer();
+
+        switch (choiceBuilding) {
+            case 0:
+                cellItem = new Farm(currentPlayer);
+                break;
+            case 1:
+                cellItem = new Barrack(currentPlayer);
+                break;
+            case 2:
+                cellItem = new Tower(currentPlayer);
+                break;
+            case 3:
+                cellItem = new Bank(currentPlayer);
+                break;
+            case 4:
+                cellItem = new TownHall(currentPlayer);
+                break;
+
+        }
+
+        if (cellItem != null) {
+            mainTable.addItem(position, cellItem);
+
+            view.updateCellItem(position, cellItem);
+        }
+    }
 }
