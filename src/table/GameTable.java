@@ -37,7 +37,7 @@ public class GameTable {  // MODEL
         gameField[position.x][position.y] = unitCell;
     }
 
-    public GameTableCell getUnitCell(Position position) {
+    public GameTableCell getCellPosition(Position position) {
         return gameField[position.x][position.y];
     }
 
@@ -54,10 +54,15 @@ public class GameTable {  // MODEL
     public void attackCellItem(Position attacker, Position damagable) {
         GameTableCell unit = gameField[attacker.x][attacker.y];
         GameTableCell victim = gameField[damagable.x][damagable.y];
-        int victimsLife = victim.getLife();
-        int attackerDamage = unit.getDamage();
-        int damage = victimsLife - attackerDamage;
-        victim.setLife(damage);
+        if (victim != null && unit != null) {
+            gameField[damagable.x][damagable.y] = null;
+         /*  int victimsLife = victim.getLife();
+           int attackerDamage = unit.getDamage();
+           int damage = victimsLife - attackerDamage;
+           victim.setLife(damage); */
+        } else {
+            System.out.println("A cella üres");
+        }
     }
 
     public void addHero(int first, int second) {
@@ -87,7 +92,7 @@ public class GameTable {  // MODEL
     }
 
     public boolean isValidStep(Position from, Position to) {
-        GameTableCell c = getUnitCell(from);
+        GameTableCell c = getCellPosition(from);
 
         return c != null &&
                 (from.x == to.x || from.y == to.y) &&
