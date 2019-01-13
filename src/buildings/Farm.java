@@ -5,11 +5,8 @@ import species.units.GameTableCell;
 
 public class Farm extends GameTableCell {
 
-    private int life = 500;
-    private final int price = 50;
-
     public Farm(Player owner) {
-        super(owner, "Farm");
+        super(owner, "Farm", 500, 0, 50);
     }
 
     @Override
@@ -26,4 +23,5 @@ public class Farm extends GameTableCell {
     public boolean canMoveOutOfAxis() {
         return false;
     }
+
 }

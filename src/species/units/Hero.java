@@ -6,12 +6,12 @@ import species.units.GameTableCell;
 public class Hero extends GameTableCell {
 
     private int life = 800;
-    private int attack = 60;
+    private int damage = 60;
     private String type;
     private final int value = 1;
 
     public Hero(Player owner) {
-        super(owner, "Heroe");
+        super(owner,"Hero", 800, 60, 0);
     }
 
     @Override

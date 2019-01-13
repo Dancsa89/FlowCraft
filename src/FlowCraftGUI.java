@@ -27,13 +27,13 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
         add(root);
 
         layoutButtons = new JPanel();
-        layoutButtons.setBounds(0, 0, 550, 700);
+        layoutButtons.setBounds(0, 0, 680, 620);
         layoutButtons.setBackground(Color.LIGHT_GRAY);
         layoutButtons.setLayout(null);
         root.add(layoutButtons);
 
         layoutPlayers = new JPanel();
-        layoutPlayers.setBounds(700, 80, 150, 100);
+        layoutPlayers.setBounds(770, 80, 150, 100);
         layoutPlayers.setBackground(Color.LIGHT_GRAY);
         layoutPlayers.setLayout(new GridLayout(3, 1));
         root.add(layoutPlayers);
@@ -43,7 +43,6 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
 
             int x = Integer.valueOf(s[0]);
             int y = Integer.valueOf(s[1]);
-            System.out.println(x + " " + y);
             presenter.onTableItemClicked(new Position(x, y));
         };
 
@@ -69,9 +68,9 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
                 btn.setBackground(Color.LIGHT_GRAY);
                 layoutButtons.add(btn);
                 btn.setOpaque(true);
-                GameTableCell player = gameField[i][j];
-                if (player != null) {
-                    btn.setText(player.toString());
+                GameTableCell unitOrBuilding = gameField[i][j];
+                if (unitOrBuilding != null) {
+                    btn.setText(unitOrBuilding.toString());
                 }
             }
         }
@@ -158,8 +157,7 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
     public void highlightRange(Range range, Position center) {
         for (int i = range.topLeft.x; i <= range.bottomRight.x; i++) {
             for (int j = range.topLeft.y; j <= range.bottomRight.y; j++) {
-                if (center == null ||
-                        center.x == i || center.y == j) {
+                if (center == null || center.x == i || center.y == j) {
                     int index = i * 10 + j;
                     ((JButton) layoutButtons.getComponent(index))
                             .setBorder(BorderFactory.createLineBorder(Color.green));

@@ -5,12 +5,8 @@ import species.units.GameTableCell;
 
 public class Tower extends GameTableCell {
 
-    private int life = 1000;
-    private final int price = 40;
-    private final int damage = 20;
-
     public Tower(Player owner) {
-        super(owner, "Tower");
+        super(owner, "Tower", 1000, 20, 40);
     }
 
     @Override

@@ -9,8 +9,7 @@ public class Bank extends GameTableCell {
     private final int price = 150;
 
     public Bank(Player owner) {
-        super(owner, "Bank");
-    }
+        super(owner, "Bank", 1500, 0, 150); }
 
     @Override
     public boolean isMovable() {

@@ -6,7 +6,7 @@ import interfaces.TableContract;
 import species.units.*;
 import table.GameTable;
 
-public class Game implements TableContract.Presenter { // PRESENTER
+public class Game implements TableContract.Presenter { // PRESENTER, here is Logic
 
     private TableContract.View view;
     private GameTable mainTable;
@@ -41,6 +41,9 @@ public class Game implements TableContract.Presenter { // PRESENTER
                         mainTable.isValidStep(selectedPosition, position) &&
                         selectedItem.getOwner().equals(currentPlayer)) {
                     moveItem(position, selectedPosition);
+                    nextPlayer();
+                } else if (!selectedItem.getOwner().equals(currentPlayer)) {
+                    attackItem(selectedPosition, position);
                     nextPlayer();
                 }
             } else {
@@ -101,6 +104,16 @@ public class Game implements TableContract.Presenter { // PRESENTER
         view.updateCellItem(position, mainTable.getUnitCell(position));
 
         view.setSelection(position, true);
+
+        view.removeHighlight();
+    }
+
+    private void attackItem(Position position, Position selectedPosition) {
+        mainTable.attackCellItem(position, selectedPosition);
+        view.setSelection(selectedPosition, false);
+
+        view.updateCellItem(selectedPosition, null);
+        view.updateCellItem(position, mainTable.getUnitCell(position));
 
         view.removeHighlight();
     }

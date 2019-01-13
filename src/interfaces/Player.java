@@ -8,7 +8,7 @@ public class Player  {
     private int goods = 200;
 
     public Player(String name) {
-        this.name = "Lord " + name;
+        this.name = name;
     }
 
     public int getGoods() { return goods; }

@@ -4,12 +4,8 @@ import interfaces.Player;
 
 public class Bowman extends GameTableCell {
 
-    private final int price = 15;
-    private int life = 250;
-    private final int damage = 25;
-
     public Bowman(Player owner) {
-        super(owner, "Bowman");
+        super(owner, "Bowman", 250, 25, 15);
     }
 
     @Override
@@ -26,4 +22,5 @@ public class Bowman extends GameTableCell {
     public boolean canMoveOutOfAxis() {
         return true;
     }
+
 }

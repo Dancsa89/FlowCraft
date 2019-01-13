@@ -1,15 +1,12 @@
 package species.units;
 
 import interfaces.Player;
+import interfaces.Position;
 
 public class Healer extends GameTableCell {
 
-    private final int price = 40;
-    private int life = 150;
-    private final int damage = 35;
-
     public Healer(Player owner) {
-        super(owner, "Healer");
+        super(owner, "Healer", 150, 35, 40);
     }
 
     @Override
@@ -27,7 +24,8 @@ public class Healer extends GameTableCell {
         return true;
     }
 
-    public void healing() {
-        // TODO: could heal the choosen unit or Hero
+    public void healing(Position position) {
+        // TODO: healing a choosed Unit
     }
+
 }

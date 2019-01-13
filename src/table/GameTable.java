@@ -3,6 +3,7 @@ package table;
 import interfaces.Player;
 import interfaces.Position;
 import species.units.GameTableCell;
+import species.units.Hero;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,19 +51,24 @@ public class GameTable {  // MODEL
         }
     }
 
- /*   public void addHero(int first, int second) {
+    public void attackCellItem(Position attacker, Position damagable) {
+        GameTableCell unit = gameField[attacker.x][attacker.y];
+        GameTableCell victim = gameField[damagable.x][damagable.y];
+        int victimsLife = victim.getLife();
+        int attackerDamage = unit.getDamage();
+        int damage = victimsLife - attackerDamage;
+        victim.setLife(damage);
+    }
+
+    public void addHero(int first, int second) {
         for (int i = 0; i < gameField.length; i++) {
             for (int j = 0; j < gameField[i].length; j++) {
                 if (gameField[first][second] == null) {
-                    Hero newHero = new Hero("Human");
-                    gameField[first][second] = newHero;
-                    newHero.setOccupied(true);
-                    newHero.setHero(true);
-                    newHero.setValue(1);
+                    gameField[first][second] = new Hero(players.get(currentPlayerIndex));
                 }
             }
         }
-    } */
+    }
 
     public GameTableCell[][] getCell() {
         return gameField;

@@ -4,12 +4,8 @@ import interfaces.Player;
 
 public class Catapult extends GameTableCell {
 
-    private final int price = 75;
-    private int life = 750;
-    private final int damage = 150;
-
     public Catapult(Player owner) {
-        super(owner, "Catapult");
+        super(owner, "Catapult", 750, 150, 75);
     }
 
     @Override
