@@ -32,6 +32,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
             if (changeItemSelection(position, selectedPosition)) {
                 if (cellItem.getOwner().equals(currentPlayer)) {
                     highlightItemRange(position, cellItem);
+                    view.showInfo(cellItem);
                 } else {
                     attackItem(selectedPosition, position);
                     nextPlayer();
@@ -131,7 +132,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
     }
 
     public void addNewUnit(Position position) {
-        String[] list = { "Bowman", "Catapult", "Healer", "Warrior" };
+        String[] list = { "Bowman (15 gold)", "Catapult (75 gold)", "Healer (40 gold)", "Warrior (25 gold)" };
         int choiceUnit = view.selectFromUnitList(list);
         GameTableCell cellItem = null;
         Player currentPlayer = mainTable.getCurrentPlayer();
@@ -159,7 +160,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
     }
 
     public void addNewBuilding(Position position) {
-        String[] list = {"Farm", "Barrack", "Tower", "Bank", "Townhall"};
+        String[] list = { "Farm (50 gold)", "Barrack (75 gold)", "Tower (40 gold)", "Bank (Price: 150)", "Townhall (100 gold)"};
         int choiceBuilding = view.selectFromBuildingList(list);
         GameTableCell cellItem = null;
         Player currentPlayer = mainTable.getCurrentPlayer();

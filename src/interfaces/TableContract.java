@@ -14,6 +14,7 @@ public interface TableContract {
         int selectFromBuildingList(String[] list);
         void showPlayers(List<Player> players);
         void selectCurrentPlayer(Player player);
+        void showInfo(GameTableCell selectedCell);
 
         void highlightRange(Range range, Position center);
         void removeHighlight();

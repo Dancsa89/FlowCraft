@@ -3,6 +3,7 @@ import interfaces.Position;
 import interfaces.Range;
 import interfaces.TableContract;
 import species.units.GameTableCell;
+import table.GameTable;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,6 +16,8 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
     private TableContract.Presenter presenter;
     private JPanel layoutButtons;
     private JPanel layoutPlayers;
+    private JPanel layoutInformations;
+    private JTextField information;
 
     public FlowCraftGUI() {
         setTitle("FlowCraft");
@@ -33,10 +36,22 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
         root.add(layoutButtons);
 
         layoutPlayers = new JPanel();
-        layoutPlayers.setBounds(770, 80, 150, 100);
+        layoutPlayers.setBounds(760, 80, 150, 100);
         layoutPlayers.setBackground(Color.LIGHT_GRAY);
         layoutPlayers.setLayout(new GridLayout(3, 1));
         root.add(layoutPlayers);
+
+      /*  layoutInformations = new JPanel();
+        layoutInformations.setBounds(740, 280, 200, 100);
+        layoutInformations.setBackground(Color.LIGHT_GRAY);
+        layoutInformations.setLayout(new GridLayout(3, 1));
+        root.add(layoutInformations); */
+
+        information = new JTextField();
+        information.setBounds(740, 280, 200,100);
+        root.add(information);
+
+
 
         actionListener = e -> {
             String[] s = e.getActionCommand().split(" ");
@@ -74,6 +89,11 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
                 }
             }
         }
+    }
+
+    @Override
+    public void showInfo(GameTableCell selectedCell) {
+        information.setText(selectedCell.cellInfo());
     }
 
     @Override
