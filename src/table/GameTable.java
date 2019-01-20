@@ -61,7 +61,7 @@ public class GameTable {  // MODEL
             if ((victim != null) && (warrior != null)) {
                 if (victim.getLife() > 1) {
                     victim.setLife(gameField[damagable.x][damagable.y].getLife() - gameField[attacker.x][attacker.y].getDamage());
-                } else {
+                } else if (victim.getLife() < 0) {
                     gameField[damagable.x][damagable.y] = null;
                 }
             }

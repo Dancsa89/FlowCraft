@@ -116,6 +116,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
             view.setSelection(selectedPosition, false);
 
             view.updateCellItem(position, mainTable.getCellPosition(position));
+            view.updateCellItem(selectedPosition, mainTable.getCellPosition(selectedPosition));
 
             view.removeHighlight();
         }

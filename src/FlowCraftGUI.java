@@ -82,10 +82,11 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
                         50,
                         50);
                 btn.setBackground(Color.LIGHT_GRAY);
-                layoutButtons.add(btn);
                 btn.setOpaque(true);
+                layoutButtons.add(btn);
                 GameTableCell unitOrBuilding = gameField[i][j];
                 if (unitOrBuilding != null) {
+                    removeHighlight();
                     btn.setText(unitOrBuilding.toString());
                 }
             }
