@@ -19,6 +19,9 @@ public class GameTable {  // MODEL
     public GameTable() {
         players.add(new Player("Dani"));
         players.add(new Player("Player2"));
+        addHero(0, 9);
+        nextPlayer();
+        addHero(9, 0);
     }
 
     public void selectItem(Position position) {
@@ -52,16 +55,14 @@ public class GameTable {  // MODEL
     }
 
     public void attackCellItem(Position attacker, Position damagable) {
-        GameTableCell unit = gameField[attacker.x][attacker.y];
+        GameTableCell warrior = gameField[attacker.x][attacker.y];
         GameTableCell victim = gameField[damagable.x][damagable.y];
-        if (victim != null && unit != null) {
-            gameField[damagable.x][damagable.y] = null;
-         /*  int victimsLife = victim.getLife();
-           int attackerDamage = unit.getDamage();
-           int damage = victimsLife - attackerDamage;
-           victim.setLife(damage); */
-        } else {
-            System.out.println("A cella üres");
+        if ((victim != null) && (warrior != null)) {
+            if (victim.getLife() > 1) {
+                victim.setLife(gameField[damagable.x][damagable.y].getLife() - gameField[attacker.x][attacker.y].getDamage());
+            } else {
+                gameField[damagable.x][damagable.y] = null;
+            }
         }
     }
 

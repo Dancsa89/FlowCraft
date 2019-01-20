@@ -44,8 +44,9 @@ public abstract class GameTableCell {
         return title.charAt(0) + "_" + owner.getName().charAt(0);
     }
 
-    public String cellInfo() { return "Title:" + " " + title + "\r\n"
-            + "Life:" + " " + life + "\r\n"
-            + "Damage:" + " " + damage + "\r\n";}
+    public String cellInfo() { return "Title:" + " " + title + "\n\r"
+            + "Life:" + " " + life + "\n\r"
+            + "Damage:" + " " + damage + "\n\r";
+    }
 
 }

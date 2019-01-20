@@ -34,7 +34,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
                     highlightItemRange(position, cellItem);
                     view.showInfo(cellItem);
                 } else {
-                    attackItem(selectedPosition, position);
+                    attackItem(position, selectedPosition);
                     nextPlayer();
                 }
             }
@@ -110,11 +110,10 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
     }
 
     private void attackItem(Position position, Position selectedPosition) {
-        mainTable.attackCellItem(position, selectedPosition);
+        mainTable.attackCellItem(selectedPosition, position);
         mainTable.selectItem(position);
         view.setSelection(selectedPosition, false);
 
-        view.updateCellItem(selectedPosition, null);
         view.updateCellItem(position, mainTable.getCellPosition(position));
 
         view.removeHighlight();

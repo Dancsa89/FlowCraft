@@ -17,7 +17,7 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
     private JPanel layoutButtons;
     private JPanel layoutPlayers;
     private JPanel layoutInformations;
-    private JTextField information;
+    private JTextArea information;
 
     public FlowCraftGUI() {
         setTitle("FlowCraft");
@@ -47,8 +47,9 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
         layoutInformations.setLayout(new GridLayout(3, 1));
         root.add(layoutInformations); */
 
-        information = new JTextField();
+        information = new JTextArea();
         information.setBounds(740, 280, 200,100);
+        information.setFont(new Font("Helvetcia", Font.PLAIN, 20));
         root.add(information);
 
 
@@ -114,8 +115,8 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
     public int selectFromList(String[] list) {
         return JOptionPane.showOptionDialog(
                 null,
-                "What do you want to do?",
-                "Cím",
+                "What do you want to do, My Lord?",
+                "Order",
                 0,
                 JOptionPane.INFORMATION_MESSAGE,
                 null,
@@ -127,8 +128,8 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
     public int selectFromUnitList(String[] list) {
         return JOptionPane.showOptionDialog(
                 null,
-                "Which building do you want to buy?",
-                "Cím",
+                "Which unit do you want to buy?",
+                "Units",
                 0,
                 JOptionPane.INFORMATION_MESSAGE,
                 null,
@@ -140,8 +141,8 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
     public int selectFromBuildingList(String[] list) {
         return JOptionPane.showOptionDialog(
                 null,
-                "Which unit do you want to buy?",
-                "Cím",
+                "Which building do you want to build?",
+                "Buildins",
                 0,
                 JOptionPane.INFORMATION_MESSAGE,
                 null,
