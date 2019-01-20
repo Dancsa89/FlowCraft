@@ -1,6 +1,7 @@
 package species.units;
 
 import interfaces.Player;
+import interfaces.Species;
 
 public abstract class GameTableCell {
 
@@ -22,8 +23,8 @@ public abstract class GameTableCell {
     public abstract int maxStep();
     public abstract boolean canMoveOutOfAxis();
 
-    public String getTitle() {
-        return title;
+    public int getPrice() {
+        return price;
     }
 
     public Player getOwner() {

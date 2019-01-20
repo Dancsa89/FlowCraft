@@ -13,11 +13,15 @@ public class Player  {
 
     public int getGoods() { return goods; }
 
+    public void setGoods(int price) {
+        this.goods = this.goods - price;
+    }
+
     public String getName() { return name; }
 
     @Override
     public String toString() {
-        return name;
+        return name + " " + "Goods:" + " " + goods;
     }
 
 }
