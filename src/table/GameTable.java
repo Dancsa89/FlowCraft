@@ -55,13 +55,15 @@ public class GameTable {  // MODEL
     }
 
     public void attackCellItem(Position attacker, Position damagable) {
-        GameTableCell warrior = gameField[attacker.x][attacker.y];
-        GameTableCell victim = gameField[damagable.x][damagable.y];
-        if ((victim != null) && (warrior != null)) {
-            if (victim.getLife() > 1) {
-                victim.setLife(gameField[damagable.x][damagable.y].getLife() - gameField[attacker.x][attacker.y].getDamage());
-            } else {
-                gameField[damagable.x][damagable.y] = null;
+        if (attacker != null) {
+            GameTableCell warrior = gameField[attacker.x][attacker.y];
+            GameTableCell victim = gameField[damagable.x][damagable.y];
+            if ((victim != null) && (warrior != null)) {
+                if (victim.getLife() > 1) {
+                    victim.setLife(gameField[damagable.x][damagable.y].getLife() - gameField[attacker.x][attacker.y].getDamage());
+                } else {
+                    gameField[damagable.x][damagable.y] = null;
+                }
             }
         }
     }

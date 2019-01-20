@@ -110,13 +110,15 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
     }
 
     private void attackItem(Position position, Position selectedPosition) {
-        mainTable.attackCellItem(selectedPosition, position);
-        mainTable.selectItem(position);
-        view.setSelection(selectedPosition, false);
+        if (selectedPosition != null) {
+            mainTable.attackCellItem(selectedPosition, position);
+            mainTable.selectItem(position);
+            view.setSelection(selectedPosition, false);
 
-        view.updateCellItem(position, mainTable.getCellPosition(position));
+            view.updateCellItem(position, mainTable.getCellPosition(position));
 
-        view.removeHighlight();
+            view.removeHighlight();
+        }
     }
 
     private void choice(Position position) {
