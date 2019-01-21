@@ -14,6 +14,7 @@ public class GameTable {  // MODEL
     private GameTableCell[][] gameField = new GameTableCell[size][size];
     private Position selectedPosition;
     private List<Player> players = new ArrayList<>();
+    private List<GameTableCell> playersThings = new ArrayList<>();
     private int currentPlayerIndex = 0;
 
     public GameTable() {
@@ -42,6 +43,10 @@ public class GameTable {  // MODEL
 
     public GameTableCell getCellPosition(Position position) {
         return gameField[position.x][position.y];
+    }
+
+    public void addToPlayerThing(GameTableCell cellitem) {
+        playersThings.add(cellitem);
     }
 
     public void moveCellItem(Position from, Position to) {
@@ -87,6 +92,8 @@ public class GameTable {  // MODEL
     }
 
     public void nextPlayer() {
+        Player player = getCurrentPlayer();
+        player.goodsPlusIncome(0);
         currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
 
     }
@@ -94,6 +101,8 @@ public class GameTable {  // MODEL
     public List<Player> getPlayers() {
         return players;
     }
+
+    public List<GameTableCell> getPlayersThings() { return playersThings; }
 
     public boolean isValidStep(Position from, Position to) {
         GameTableCell c = getCellPosition(from);

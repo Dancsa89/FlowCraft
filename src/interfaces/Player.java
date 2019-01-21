@@ -22,6 +22,14 @@ public class Player implements Species {
         this.goods = this.goods - price;
     }
 
+    public void goodsPlusIncome(int income) {
+        if (income == 0) {
+        this.goods = this.goods + this.income;
+    } else {
+        this.goods = this.goods + (this.income + income);
+        }
+    }
+
     public String getName() { return name; }
 
     @Override
