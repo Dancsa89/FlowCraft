@@ -6,9 +6,9 @@ import table.GameTable;
 
 public class GameLogicMove {
 
-    public TableContract.View view;
-    public GameTable mainTable;
-    public Position position;
+    private TableContract.View view;
+    private GameTable mainTable;
+    private Position position;
     public boolean needNextPlayer = false;
 
     public GameLogicMove(Position position, GameTable mainTable, TableContract.View view) {

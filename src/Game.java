@@ -24,8 +24,5 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
     public void onTableItemClicked(Position position) {
         GameLogic gameLogic = new GameLogic(mainTable, view, position);
         gameLogic.process();
-        mainTable = gameLogic.mainTable;
-        view = gameLogic.view;
-        position = gameLogic.position;
     }
 }
