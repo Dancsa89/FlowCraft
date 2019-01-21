@@ -4,8 +4,8 @@ import species.units.GameTableCell;
 
 public interface Species {
 
-    void human(GameTableCell unitOrBuilding);
+    int human(GameTableCell unitOrBuilding);
     void goblin();
     void orc();
-    void nightElf();
+    boolean nightElf();
 }
