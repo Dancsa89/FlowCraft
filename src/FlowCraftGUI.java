@@ -206,6 +206,20 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
     }
 
     @Override
+    public void highlightOwnedCells(Player player, GameTableCell cellitem) {
+        for (int i = 0; i < layoutButtons.getComponentCount(); i++) {
+            for (int j = 0; j < layoutButtons.getComponentCount(); j++) {
+                int index = i * 10 + j;
+                JButton btn = (JButton) layoutButtons.getComponent(index);
+
+                if (cellitem.getOwner().equals(player.toString())) {
+                    btn.setBorder(BorderFactory.createLineBorder(Color.BLUE));
+                }
+            }
+        }
+    }
+
+    @Override
     public void removeHighlight() {
         for (int i = 0; i < layoutButtons.getComponentCount(); i++) {
             ((JButton) layoutButtons.getComponent(i))

@@ -68,6 +68,12 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
         view.highlightRange(range, item.canMoveOutOfAxis() ? null : itemPosition);
     }
 
+   /* private void highlightOwnedCellItems(Position position, Player player, GameTableCell cell) {
+        player = mainTable.getCurrentPlayer();
+        cell = mainTable.getCellPosition(position);
+        view.highlightOwnedCells(player, cell);
+    } */
+
     private void nextPlayer() {
         mainTable.nextPlayer();
         view.selectCurrentPlayer(mainTable.getCurrentPlayer());
