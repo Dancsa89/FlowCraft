@@ -8,12 +8,15 @@ public class Player implements Species {
 
     private String name;
     private int goods = 200;
+    private int income = 50;
 
     public Player(String name) {
         this.name = name;
     }
 
     public int getGoods() { return goods; }
+
+    public int getIncome() { return income; }
 
     public void setGoods(int price) {
         this.goods = this.goods - price;
@@ -42,14 +45,12 @@ public class Player implements Species {
     public boolean nightElf() {
         Random rand = new Random();
         int randomNum = rand.nextInt((4 - 1) + 1) + 1;
-        if (randomNum == 1) {
-            return true;
-        }
-        return false;
+        return randomNum == 1;
     }
 
     @Override
-    public void orc() {
+    public void orc(GameTableCell unitOrBuilding) {
+        int counter = 0;
 
     }
 }

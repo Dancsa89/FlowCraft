@@ -22,5 +22,6 @@ public interface TableContract {
 
     interface Presenter {
         void onTableItemClicked(Position position);
+        void endRound();
     }
 }

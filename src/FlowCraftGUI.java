@@ -7,6 +7,7 @@ import table.GameTable;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 
@@ -16,8 +17,9 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
     private TableContract.Presenter presenter;
     private JPanel layoutButtons;
     private JPanel layoutPlayers;
-    private JPanel layoutInformations;
+    private JButton endRound;
     private JTextArea information;
+    private JPanel endRoundButton;
 
     public FlowCraftGUI() {
         setTitle("FlowCraft");
@@ -41,17 +43,31 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
         layoutPlayers.setLayout(new GridLayout(2, 1));
         root.add(layoutPlayers);
 
-      /*  layoutInformations = new JPanel();
-        layoutInformations.setBounds(740, 280, 200, 100);
-        layoutInformations.setBackground(Color.LIGHT_GRAY);
-        layoutInformations.setLayout(new GridLayout(3, 1));
-        root.add(layoutInformations); */
-
         information = new JTextArea();
         information.setBounds(740, 280, 200,100);
         information.setFont(new Font("Helvetcia", Font.PLAIN, 20));
         root.add(information);
 
+      /*  endRoundButton = new JPanel();
+        endRoundButton.setBounds(760, 500, 150, 50);
+        endRoundButton.setBackground(Color.LIGHT_GRAY);
+        endRoundButton.setLayout(null);
+        root.add(endRoundButton); */
+
+        endRound = new JButton();
+        endRound.setBounds(760,500,150,50);
+        endRound.setText("End Round");
+        endRound.setActionCommand("endRound");
+        endRound.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String command = e.getActionCommand();
+                if (command.equals("endRound")) {
+                    presenter.endRound();
+                }
+            }
+        });
+        root.add(endRound);
 
 
         actionListener = e -> {

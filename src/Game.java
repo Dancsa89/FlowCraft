@@ -79,6 +79,12 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
         }
     }
 
+    @Override
+    public void endRound() {
+        mainTable.nextPlayer();
+        view.selectCurrentPlayer(mainTable.getCurrentPlayer());
+    }
+
     private boolean changeItemSelection(Position position, Position selectedPosition) {
         mainTable.selectItem(position);
         view.setSelection(position, true);

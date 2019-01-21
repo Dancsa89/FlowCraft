@@ -88,6 +88,7 @@ public class GameTable {  // MODEL
 
     public void nextPlayer() {
         currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
+
     }
 
     public List<Player> getPlayers() {
