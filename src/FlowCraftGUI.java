@@ -112,6 +112,16 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
         btn.setText(CellItem != null ? CellItem.toString() : null);
     }
 
+    public void updatePlayerInfo(Player player) {
+        for (int i = 0; i < layoutPlayers.getComponentCount(); i++) {
+            Label currentPlayer = (Label) layoutPlayers.getComponent(i);
+            if (currentPlayer.getText() != player.toString()) {
+                currentPlayer.setText(player.toString());
+            }
+
+        }
+    }
+
     @Override
     public int selectFromList(String[] list) {
         return JOptionPane.showOptionDialog(
@@ -167,11 +177,10 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
 
             if (component.getText().equals(player.toString())) {
                 component.setBackground(Color.GREEN);
-                component.revalidate();
             } else {
                 component.setBackground(null);
-                component.revalidate();
             }
+            updatePlayerInfo(player);
         }
         layoutPlayers.repaint();
     }
