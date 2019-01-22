@@ -9,9 +9,9 @@ import table.GameTable;
 public class GameLogic {
 
     public boolean needNextPlayer = false;
-    public TableContract.View view;
-    public GameTable mainTable;
-    public Position position;
+    private TableContract.View view;
+    private GameTable mainTable;
+    private Position position;
 
     public GameLogic(GameTable mainTable, TableContract.View view, Position position) {
         this.view = view;
@@ -34,14 +34,12 @@ public class GameLogic {
                     attackItem(position, selectedPosition);
                     needNextPlayer = true;
                 }
-                position = null;
-                cellItem = null;
+            }
+        } else {
+            if (selectedPosition != null) {
+                move();
             } else {
-                if (selectedPosition != null) {
-                    move();
-                } else {
-                   build();
-                }
+                build();
             }
         }
     }
@@ -49,9 +47,6 @@ public class GameLogic {
     private void move() {
         GameLogicMove gameLogicMove = new GameLogicMove(position, mainTable, view);
         gameLogicMove.move();
-        position = gameLogicMove.position;
-        mainTable = gameLogicMove.mainTable;
-        view = gameLogicMove.view;
         if (gameLogicMove.needNextPlayer) {
             nextPlayer();
         }
@@ -60,9 +55,6 @@ public class GameLogic {
     private void build() {
         GameLogicBuild gameLogicBuild = new GameLogicBuild(position, mainTable, view);
         gameLogicBuild.choice();
-        position = gameLogicBuild.position;
-        mainTable = gameLogicBuild.mainTable;
-        view = gameLogicBuild.view;
         nextPlayer();
     }
 

@@ -7,9 +7,9 @@ import table.GameTable;
 
 public class GameLogicBuild {
 
-    public TableContract.View view;
-    public GameTable mainTable;
-    public Position position;
+    private TableContract.View view;
+    private GameTable mainTable;
+    private Position position;
 
     public GameLogicBuild(Position position, GameTable mainTable, TableContract.View view) {
         this.view = view;
