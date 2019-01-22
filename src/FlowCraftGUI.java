@@ -46,7 +46,6 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
         layoutGoods = new JPanel();
         layoutGoods.setBounds(760, 180, 150, 50);
         layoutGoods.setBackground(Color.LIGHT_GRAY);
-        layoutGoods.setLayout(null);
         root.add(layoutGoods);
 
         information = new JTextArea();
@@ -185,7 +184,6 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
     @Override
     public void showGoods(Player player) {
         layoutGoods.removeAll();
-
         layoutGoods.add(new Label(player.toStringGoods()));
     }
 
