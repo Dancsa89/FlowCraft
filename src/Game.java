@@ -56,6 +56,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
                 redraw();
             }
         }
+        redraw();
     }
 
     private void redraw() {
@@ -106,6 +107,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
         currentPlayer.setStepPoints(3);
         mainTable.nextPlayer();
         view.selectCurrentPlayer(mainTable.getCurrentPlayer());
+        view.showGoods(mainTable.getCurrentPlayer());
         if (currentPlayer.getStepPoints() <= 0) {
             currentPlayer.stepPointsPositive();
         }

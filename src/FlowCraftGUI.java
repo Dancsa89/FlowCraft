@@ -185,6 +185,7 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
     public void showGoods(Player player) {
         layoutGoods.removeAll();
         layoutGoods.add(new Label(player.toStringGoods()));
+        layoutGoods.revalidate();
     }
 
     @Override
