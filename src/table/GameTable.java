@@ -1,5 +1,6 @@
 package table;
 
+import buildings.Bank;
 import interfaces.Player;
 import interfaces.Position;
 import species.units.GameTableCell;
@@ -23,6 +24,7 @@ public class GameTable {  // MODEL
         addHero(0, 9);
         nextPlayer();
         addHero(9, 0);
+        nextPlayer();
     }
 
     public void selectItem(Position position) {
@@ -93,9 +95,10 @@ public class GameTable {  // MODEL
 
     public void nextPlayer() {
         Player player = getCurrentPlayer();
-        player.goodsPlusIncome(0);
-        currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
-
+        if (player.getStepPoints() == 0) {
+            currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
+            player.goodsPlusIncome(0);
+        }
     }
 
     public List<Player> getPlayers() {

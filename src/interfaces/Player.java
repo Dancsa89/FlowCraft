@@ -7,8 +7,9 @@ import java.util.Random;
 public class Player implements Species {
 
     private String name;
-    private int goods = 200;
+    private int goods = 150;
     private int income = 50;
+    private int stepPoints = 3;
 
     public Player(String name) {
         this.name = name;
@@ -20,6 +21,14 @@ public class Player implements Species {
 
     public void setGoods(int price) {
         this.goods = this.goods - price;
+    }
+
+    public void setStepPoints(int dec) {
+        this.stepPoints = this.stepPoints - dec;
+    }
+
+    public int getStepPoints() {
+        return stepPoints;
     }
 
     public void goodsPlusIncome(int income) {

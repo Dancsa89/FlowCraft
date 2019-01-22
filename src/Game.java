@@ -75,6 +75,8 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
     } */
 
     private void nextPlayer() {
+        Player currentPlayer = mainTable.getCurrentPlayer();
+        currentPlayer.setStepPoints(1);
         mainTable.nextPlayer();
         view.selectCurrentPlayer(mainTable.getCurrentPlayer());
 
@@ -87,6 +89,8 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
 
     @Override
     public void endRound() {
+        Player currentPlayer = mainTable.getCurrentPlayer();
+        currentPlayer.setStepPoints(3);
         mainTable.nextPlayer();
         view.selectCurrentPlayer(mainTable.getCurrentPlayer());
     }
