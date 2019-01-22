@@ -7,7 +7,7 @@ import java.util.Random;
 public class Player implements Species {
 
     private String name;
-    private int goods = 150;
+    private int goods = 200;
     private int income = 50;
     private int stepPoints = 3;
 
@@ -35,16 +35,20 @@ public class Player implements Species {
         return stepPoints;
     }
 
-    public void stepPointsPositive(int plus) {
-        this.stepPoints = this.stepPoints = plus;
+    public void stepPointsPositive() {
+        this.stepPoints = 3;
     }
 
     public void goodsPlusIncome(int income) {
+        int bank = this.income + 25;
         if (income == 0) {
         this.goods = this.goods + this.income;
-    } else {
-        this.goods = this.goods + (this.income + income);
+    } else if (income == 1) {
+        this.goods = this.goods + (this.income + bank);
+        } else {
+            this.goods = this.goods + (this.income + (bank * 2));
         }
+        System.out.println(this.income);
     }
 
     public String getName() { return name; }
@@ -69,8 +73,7 @@ public class Player implements Species {
     }
 
     @Override
-    public void orc(GameTableCell unitOrBuilding) {
-        int counter = 0;
+    public void orc() {
 
     }
 }

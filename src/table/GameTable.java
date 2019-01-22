@@ -99,7 +99,6 @@ public class GameTable {  // MODEL
             currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
             player.goodsPlusIncome(0);
         }
-
     }
 
     public void suddenlyNextPlayer() {
