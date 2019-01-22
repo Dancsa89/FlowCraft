@@ -48,7 +48,6 @@ public class Player implements Species {
         } else {
             this.goods = this.goods + (this.income + (bank * 2));
         }
-        System.out.println(this.income);
     }
 
     public String getName() { return name; }

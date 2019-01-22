@@ -66,9 +66,9 @@ public class GameTable {  // MODEL
             GameTableCell warrior = gameField[attacker.x][attacker.y];
             GameTableCell victim = gameField[damagable.x][damagable.y];
             if ((victim != null) && (warrior != null)) {
-                if (victim.getLife() > 1) {
+                if (victim.getLife() >= 1) {
                     victim.setLife(gameField[damagable.x][damagable.y].getLife() - gameField[attacker.x][attacker.y].getDamage());
-                } else if (victim.getLife() < 0) {
+                } else if (victim.getLife() <= 0) {
                     gameField[damagable.x][damagable.y] = null;
                 }
             }
@@ -95,7 +95,7 @@ public class GameTable {  // MODEL
 
     public void nextPlayer() {
         Player player = getCurrentPlayer();
-        if (player.getStepPoints() == 0) {
+        if (player.getStepPoints() <= 0) {
             currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
             player.goodsPlusIncome(0);
         }
