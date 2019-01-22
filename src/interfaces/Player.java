@@ -40,12 +40,12 @@ public class Player implements Species {
     }
 
     public void goodsPlusIncome(int income) {
-        int bank = this.income + 25;
+        int bank = 25;
         if (income == 0) {
         this.goods = this.goods + this.income;
     } else if (income == 1) {
         this.goods = this.goods + (this.income + bank);
-        } else {
+        } else if (income == 2) {
             this.goods = this.goods + (this.income + (bank * 2));
         }
     }

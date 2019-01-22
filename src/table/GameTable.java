@@ -94,11 +94,20 @@ public class GameTable {  // MODEL
     }
 
     public void nextPlayer() {
+        int index = 0;
         Player player = getCurrentPlayer();
         if (player.getStepPoints() <= 0) {
+            for (int i = 0; i < gameField.length; i++) {
+                for (int j = 0; j < gameField[i].length; j++) {
+                    if (gameField[i][j] instanceof Bank) {
+                        index++;
+                    }
+                }
+            }
+            player.goodsPlusIncome(index);
             currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
-            player.goodsPlusIncome(0);
         }
+
     }
 
     public void suddenlyNextPlayer() {
