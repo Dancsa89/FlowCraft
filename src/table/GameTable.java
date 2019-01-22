@@ -22,9 +22,9 @@ public class GameTable {  // MODEL
         players.add(new Player("Dani"));
         players.add(new Player("Player2"));
         addHero(0, 9);
-        nextPlayer();
+        suddenlyNextPlayer();
         addHero(9, 0);
-        nextPlayer();
+        suddenlyNextPlayer();
     }
 
     public void selectItem(Position position) {
@@ -100,6 +100,10 @@ public class GameTable {  // MODEL
             player.goodsPlusIncome(0);
         }
     }
+
+    public void suddenlyNextPlayer() {
+            currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
+        }
 
     public List<Player> getPlayers() {
         return players;

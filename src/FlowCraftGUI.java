@@ -182,13 +182,10 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
 
             if (component.getText().equals(player.toString())) {
                 component.setBackground(Color.GREEN);
-                component.revalidate();
             } else {
                 component.setBackground(null);
-                component.revalidate();
             }
         }
-        layoutPlayers.repaint();
     }
 
     @Override
