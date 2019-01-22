@@ -37,6 +37,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
                 } else {
                     attackItem(position, selectedPosition);
                     nextPlayer();
+                    redraw();
                 }
             }
         } else {
@@ -47,12 +48,20 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
                         selectedItem.getOwner().equals(currentPlayer)) {
                     moveItem(position, selectedPosition);
                     nextPlayer();
+                    redraw();
                 }
             } else {
                 choice(position);
                 nextPlayer();
+                redraw();
             }
         }
+    }
+
+    private void redraw() {
+        view.showPlayers(mainTable.getPlayers());
+        view.selectCurrentPlayer(mainTable.getCurrentPlayer());
+        view.showGoods(mainTable.getCurrentPlayer());
     }
 
     private void highlightItemRange(Position itemPosition, GameTableCell item) {
