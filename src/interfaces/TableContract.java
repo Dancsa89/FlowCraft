@@ -15,6 +15,7 @@ public interface TableContract {
         void showPlayers(List<Player> players);
         void selectCurrentPlayer(Player player);
         void showInfo(GameTableCell selectedCell);
+        void showGoods(Player player);
 
         void highlightRange(Range range, Position center);
         void removeHighlight();

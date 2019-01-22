@@ -17,6 +17,7 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
     private TableContract.Presenter presenter;
     private JPanel layoutButtons;
     private JPanel layoutPlayers;
+    private JPanel layoutGoods;
     private JButton endRound;
     private JTextArea information;
 
@@ -41,6 +42,12 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
         layoutPlayers.setBackground(Color.LIGHT_GRAY);
         layoutPlayers.setLayout(new GridLayout(2, 1));
         root.add(layoutPlayers);
+
+        layoutGoods = new JPanel();
+        layoutGoods.setBounds(760, 180, 150, 50);
+        layoutGoods.setBackground(Color.LIGHT_GRAY);
+        layoutGoods.setLayout(null);
+        root.add(layoutGoods);
 
         information = new JTextArea();
         information.setBounds(740, 280, 200,100);
@@ -171,8 +178,15 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
         layoutPlayers.removeAll();
 
         for (Player player : players) {
-            layoutPlayers.add(new Label(player.toString()));
+            layoutPlayers.add(new Label(player.getName()));
         }
+    }
+
+    @Override
+    public void showGoods(Player player) {
+        layoutGoods.removeAll();
+
+        layoutGoods.add(new Label(player.toStringGoods()));
     }
 
     @Override
@@ -180,7 +194,7 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
         for (int i = 0; i < layoutPlayers.getComponentCount(); i++) {
             Label component = (Label) layoutPlayers.getComponent(i);
 
-            if (component.getText().equals(player.toString())) {
+            if (component.getText().equals(player.getName())) {
                 component.setBackground(Color.GREEN);
             } else {
                 component.setBackground(null);

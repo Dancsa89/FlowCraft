@@ -19,6 +19,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
         view.showTable(mainTable.getCell());
         view.showPlayers(mainTable.getPlayers());
         view.selectCurrentPlayer(mainTable.getCurrentPlayer());
+        view.showGoods(mainTable.getCurrentPlayer());
     }
 
     @Override
@@ -85,6 +86,9 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
             mainTable.deselectItem();
             view.setSelection(selectedPosition, false);
         }
+        if (currentPlayer.getStepPoints() == 0) {
+            currentPlayer.stepPointsPositive(3);
+        }
     }
 
     @Override
@@ -93,6 +97,9 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
         currentPlayer.setStepPoints(3);
         mainTable.nextPlayer();
         view.selectCurrentPlayer(mainTable.getCurrentPlayer());
+        if (currentPlayer.getStepPoints() == 0) {
+            currentPlayer.stepPointsPositive(3);
+        }
     }
 
     private boolean changeItemSelection(Position position, Position selectedPosition) {

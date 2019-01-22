@@ -17,6 +17,10 @@ public class Player implements Species {
 
     public int getGoods() { return goods; }
 
+    public String toStringGoods() {
+        return "Goods" + Integer.toString(goods);
+    }
+
     public int getIncome() { return income; }
 
     public void setGoods(int price) {
@@ -31,6 +35,10 @@ public class Player implements Species {
         return stepPoints;
     }
 
+    public void stepPointsPositive(int plus) {
+        this.stepPoints = this.stepPoints = plus;
+    }
+
     public void goodsPlusIncome(int income) {
         if (income == 0) {
         this.goods = this.goods + this.income;
@@ -40,11 +48,6 @@ public class Player implements Species {
     }
 
     public String getName() { return name; }
-
-    @Override
-    public String toString() {
-        return name + " " + "Goods:" + " " + goods;
-    }
 
     @Override
     public int human(GameTableCell unitOrBuilding) {
