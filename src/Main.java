@@ -11,8 +11,8 @@ public class Main {
         System.out.println(gameTable); */
 
         EventQueue.invokeLater(() -> {
-            FlowCraftGUI window = new FlowCraftGUI();
-            window.setVisible(true);
+            MenuGUI menu = new MenuGUI();
+            menu.setVisible(true);
         });
     }
 }

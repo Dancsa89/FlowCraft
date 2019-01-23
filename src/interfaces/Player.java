@@ -10,9 +10,12 @@ public class Player implements Species {
     private int goods = 200;
     private int income = 50;
     private int stepPoints = 3;
+    private String specie;
 
-    public Player(String name) {
+    public Player(String name, String specie) {
+
         this.name = name;
+        this.specie = specie;
     }
 
     public int getGoods() { return goods; }
@@ -46,6 +49,8 @@ public class Player implements Species {
     } else if (income == 1) {
         this.goods = this.goods + (this.income + bank);
         } else if (income == 2) {
+            this.goods = this.goods + (this.income + (bank * 2));
+        } else {
             this.goods = this.goods + (this.income + (bank * 2));
         }
     }

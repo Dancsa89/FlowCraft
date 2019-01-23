@@ -19,7 +19,11 @@ public interface TableContract {
 
         void highlightRange(Range range, Position center);
         void removeHighlight();
-       // void highlightOwnedCells(Player player, GameTableCell cellitem);
+       // void highlightOwnedCells();
+    }
+
+    interface Menu {
+
     }
 
     interface Presenter {

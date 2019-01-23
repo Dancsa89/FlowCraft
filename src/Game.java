@@ -208,7 +208,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
     }
 
     public void addNewBuilding(Position position) {
-        String[] list = { "Farm (50 gold)", "Barrack (75 gold)", "Tower (40 gold)", "Bank (Price: 150)", "Townhall (100 gold)"};
+        String[] list = { "Farm (50 gold)", "Barrack (75 gold)", "Tower (40 gold)", "Bank (150 gold)", "Townhall (100 gold)"};
         int choiceBuilding = view.selectFromBuildingList(list);
         GameTableCell cellItem = null;
         Player currentPlayer = mainTable.getCurrentPlayer();

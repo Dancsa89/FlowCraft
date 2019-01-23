@@ -26,6 +26,7 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(1000, 800);
         setLocationRelativeTo(null);
+        setVisible(false);
 
         JPanel root = new JPanel();
         root.setLayout(null);

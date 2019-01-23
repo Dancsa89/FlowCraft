@@ -19,8 +19,8 @@ public class GameTable {  // MODEL
     private int currentPlayerIndex = 0;
 
     public GameTable() {
-        players.add(new Player("Dani"));
-        players.add(new Player("Player2"));
+        players.add(new Player("Dani", "Human"));
+        players.add(new Player("Player2", "Goblin"));
         addHero(0, 9);
         suddenlyNextPlayer();
         addHero(9, 0);
