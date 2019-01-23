@@ -37,7 +37,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
                 } else {
                     attackItem(position, selectedPosition);
                     nextPlayer();
-                    redraw();
+                   // redraw();
                 }
             }
         } else {
@@ -48,15 +48,15 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
                         selectedItem.getOwner().equals(currentPlayer)) {
                     moveItem(position, selectedPosition);
                     nextPlayer();
-                    redraw();
+                   // redraw();
                 }
             } else {
                 choice(position);
                 nextPlayer();
-                redraw();
+               // redraw();
             }
         }
-        redraw();
+       // redraw();
     }
 
     private void redraw() {
@@ -80,8 +80,6 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
     }
 
    /* private void highlightOwnedCellItems(Position position, Player player, GameTableCell cell) {
-        player = mainTable.getCurrentPlayer();
-        cell = mainTable.getCellPosition(position);
         view.highlightOwnedCells(player, cell);
     } */
 
@@ -99,6 +97,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
         if (currentPlayer.getStepPoints() <= 0) {
             currentPlayer.stepPointsPositive();
         }
+        redraw();
     }
 
     @Override
@@ -111,6 +110,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
         if (currentPlayer.getStepPoints() <= 0) {
             currentPlayer.stepPointsPositive();
         }
+        redraw();
     }
 
     private boolean changeItemSelection(Position position, Position selectedPosition) {

@@ -53,12 +53,6 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
         information.setFont(new Font("Helvetcia", Font.PLAIN, 20));
         root.add(information);
 
-      /*  endRoundButton = new JPanel();
-        endRoundButton.setBounds(760, 500, 150, 50);
-        endRoundButton.setBackground(Color.LIGHT_GRAY);
-        endRoundButton.setLayout(null);
-        root.add(endRoundButton); */
-
         endRound = new JButton();
         endRound.setBounds(760,500,150,50);
         endRound.setText("End Round");
@@ -214,7 +208,7 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
         }
     }
 
-  /*  @Override
+   /* @Override
     public void highlightOwnedCells(Player player, GameTableCell cellitem) {
         for (int i = 0; i < layoutButtons.getComponentCount(); i++) {
             for (int j = 0; j < layoutButtons.getComponentCount(); j++) {
@@ -226,7 +220,7 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
                 }
             }
         }
-    }*/
+    } */
 
     @Override
     public void removeHighlight() {
