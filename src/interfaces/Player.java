@@ -55,7 +55,19 @@ public class Player implements Species {
         }
     }
 
-    public String getName() { return name; }
+    public String getName() {
+        String fullInformation ="";
+        if (specie == 1) {
+            fullInformation += "Human";
+        } else if (specie == 2) {
+            fullInformation += "Orc";
+        } else if (specie == 3) {
+            fullInformation += "Goblin";
+        } else if (specie == 4) {
+            fullInformation += "Night Elf";
+        }
+        return name + " " + "Specie:" + " " + fullInformation;
+    }
 
     @Override
     public int human(GameTableCell unitOrBuilding) {
