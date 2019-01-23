@@ -30,6 +30,10 @@ public class Player implements Species {
 
     public int getSpecie() { return specie; }
 
+    public void setRoundCount(int plus) { this.roundCount += plus; }
+
+    public int getRoundCount() { return roundCount; }
+
     public void setGoods(int price) {
         this.goods = this.goods - price;
     }
@@ -93,10 +97,8 @@ public class Player implements Species {
     }
 
     @Override
-    public void orc(int roundCount, GameTableCell cellitem) {
+    public void orc(GameTableCell cellitem) {
         int overDamaged = (int) (cellitem.getDamage() * 0.75);
-        if (roundCount == 7) {
-            cellitem.setDamage(overDamaged);
-        }
+        cellitem.setDamage(overDamaged);
     }
 }

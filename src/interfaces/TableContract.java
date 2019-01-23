@@ -30,5 +30,6 @@ public interface TableContract {
     interface Presenter {
         void onTableItemClicked(Position position);
         void endRound();
+        void bloodLust(Position position);
     }
 }

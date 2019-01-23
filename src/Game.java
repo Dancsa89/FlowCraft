@@ -3,6 +3,7 @@ import interfaces.Player;
 import interfaces.Position;
 import interfaces.Range;
 import interfaces.TableContract;
+import org.omg.PortableServer.POA;
 import species.units.*;
 import table.GameTable;
 
@@ -87,6 +88,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
     private void nextPlayer() {
         Player currentPlayer = mainTable.getCurrentPlayer();
         currentPlayer.setStepPoints(1);
+
         mainTable.nextPlayer();
         view.selectCurrentPlayer(mainTable.getCurrentPlayer());
         view.removeHighlightPlayersUnits();
@@ -116,6 +118,15 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
             currentPlayer.stepPointsPositive();
         }
         redraw();
+    }
+
+    @Override
+    public void bloodLust(Position position) {
+        Player currentPlayer = mainTable.getCurrentPlayer();
+        currentPlayer.setRoundCount(1);
+        if (currentPlayer.getSpecie() == 2 && currentPlayer.getRoundCount() == 7) {
+            currentPlayer.orc(mainTable.getCellPosition(position));
+        }
     }
 
     private boolean changeItemSelection(Position position, Position selectedPosition) {

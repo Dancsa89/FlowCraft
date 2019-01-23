@@ -6,6 +6,6 @@ public interface Species {
 
     int human(GameTableCell unitOrBuilding);
     void goblin();
-    void orc(int roundCount, GameTableCell cellitem);
+    void orc(GameTableCell cellitem);
     boolean nightElf();
 }
