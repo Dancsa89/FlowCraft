@@ -99,7 +99,12 @@ public class GameTable {  // MODEL
                     }
                 }
             }
-            player.goodsPlusIncome(index);
+            if (player.getSpecie() == 3) {
+                player.setGoods2(player.goblin());
+                player.goodsPlusIncome(index);
+            } else {
+                player.goodsPlusIncome(index);
+            }
             currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
         }
 

@@ -1,5 +1,6 @@
 package interfaces;
 
+import org.omg.CORBA.PUBLIC_MEMBER;
 import species.units.GameTableCell;
 import table.GameTable;
 
@@ -38,6 +39,10 @@ public class Player implements Species {
         this.goods = this.goods - price;
     }
 
+    public void setGoods2(int plus) {
+        this.goods = this.goods + plus;
+    }
+
     public void setStepPoints(int dec) {
         this.stepPoints = this.stepPoints - dec;
     }
@@ -56,9 +61,7 @@ public class Player implements Species {
         this.goods = this.goods + this.income;
     } else if (income == 1) {
         this.goods = this.goods + (this.income + bank);
-        } else if (income == 2) {
-            this.goods = this.goods + (this.income + (bank * 2));
-        } else {
+        } else if (income >= 2) {
             this.goods = this.goods + (this.income + (bank * 2));
         }
     }
@@ -85,8 +88,9 @@ public class Player implements Species {
     }
 
     @Override
-    public void goblin() {
-        this.income = this.income + (int) (this.income * 0.1);
+    public int goblin() {
+        return (int) (getIncome() * 1.1);
+
     }
 
     @Override
