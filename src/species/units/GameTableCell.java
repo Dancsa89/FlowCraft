@@ -41,6 +41,10 @@ public abstract class GameTableCell {
         return damage;
     }
 
+    public void setDamage(int plus) {
+        this.damage = this.damage + plus;
+    }
+
     public String toString() {
         return title.charAt(0) + "_" + owner.getName().charAt(0);
     }

@@ -1,6 +1,7 @@
 package interfaces;
 
 import species.units.GameTableCell;
+import table.GameTable;
 
 import java.util.Random;
 
@@ -11,6 +12,7 @@ public class Player implements Species {
     private int income = 50;
     private int stepPoints = 3;
     private int specie;
+    private int roundCount = 0;
 
     public Player(String name, int specie) {
 
@@ -25,6 +27,8 @@ public class Player implements Species {
     }
 
     public int getIncome() { return income; }
+
+    public int getSpecie() { return specie; }
 
     public void setGoods(int price) {
         this.goods = this.goods - price;
@@ -66,7 +70,7 @@ public class Player implements Species {
         } else if (specie == 4) {
             fullInformation += "Night Elf";
         }
-        return name + " " + "," + "Specie:" + " " + fullInformation;
+        return name + " " + "," + " " + fullInformation;
     }
 
     @Override
@@ -78,7 +82,7 @@ public class Player implements Species {
 
     @Override
     public void goblin() {
-
+        this.income = this.income + (int) (this.income * 0.1);
     }
 
     @Override
@@ -89,7 +93,10 @@ public class Player implements Species {
     }
 
     @Override
-    public void orc() {
-
+    public void orc(int roundCount, GameTableCell cellitem) {
+        int overDamaged = (int) (cellitem.getDamage() * 0.75);
+        if (roundCount == 7) {
+            cellitem.setDamage(overDamaged);
+        }
     }
 }

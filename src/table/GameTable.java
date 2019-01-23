@@ -94,7 +94,7 @@ public class GameTable {  // MODEL
         if (player.getStepPoints() <= 0) {
             for (int i = 0; i < gameField.length; i++) {
                 for (int j = 0; j < gameField[i].length; j++) {
-                    if (gameField[i][j] instanceof Bank && gameField[i][j].getOwner().equals(getCurrentPlayer())) {
+                    if (gameField[i][j] instanceof Bank && gameField[i][j].getOwner().equals(player)) {
                         index++;
                     }
                 }

@@ -16,12 +16,12 @@ public class TownHall extends GameTableCell {
 
     @Override
     public int maxStep() {
-        return 0;
+        return 2;
     }
 
     @Override
     public boolean canMoveOutOfAxis() {
-        return false;
+        return true;
     }
 
 }
