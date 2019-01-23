@@ -101,9 +101,9 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
                 layoutButtons.add(btn);
                 GameTableCell unitOrBuilding = gameField[i][j];
                 if (unitOrBuilding != null) {
-                    removeHighlight();
                     btn.setText(unitOrBuilding.toString());
                 }
+                removeHighlight();
             }
         }
     }
@@ -121,10 +121,10 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
     }
 
     @Override
-    public void updateCellItem(Position position, GameTableCell CellItem) {
+    public void updateCellItem(Position position, GameTableCell cellItem) {
         JButton btn = (JButton) layoutButtons.getComponent(position.x * 10 + position.y);
 
-        btn.setText(CellItem != null ? CellItem.toString() : null);
+        btn.setText(cellItem != null ? cellItem.toString() : null);
     }
 
     @Override
