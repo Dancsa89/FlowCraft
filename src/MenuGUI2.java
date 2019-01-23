@@ -15,8 +15,9 @@ public class MenuGUI2 extends JFrame implements TableContract.Menu {
     private JButton goblin;
     private JButton nightElf;
     private JTextArea welcome;
+    private int specie2;
 
-    public MenuGUI2(String name) {
+    public MenuGUI2(String name, int specie) {
         setTitle("FlowCraft - Menu");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(450, 500);
@@ -30,7 +31,8 @@ public class MenuGUI2 extends JFrame implements TableContract.Menu {
         welcome.setBounds(20, 20, 400, 100);
         welcome.setBackground(Color.lightGray);
         welcome.setLayout(null);
-        welcome.setText("Welcome to FlowCraft! \n Please write in youre name, and select specie!");;
+        welcome.setText("Welcome to FlowCraft! \n Please write in youre name, and select specie!");
+        ;
         root.add(welcome);
 
         player2 = new JTextField();
@@ -40,7 +42,7 @@ public class MenuGUI2 extends JFrame implements TableContract.Menu {
 
         start = new JButton();
         start.setText("Start");
-        start.setBounds(170,400, 100,50);
+        start.setBounds(170, 400, 100, 50);
         start.setActionCommand("start");
         start.addActionListener(new ActionListener() {
             @Override
@@ -48,7 +50,7 @@ public class MenuGUI2 extends JFrame implements TableContract.Menu {
                 String start = e.getActionCommand();
                 if (start.equals("start")) {
                     getDefaultCloseOperation();
-                    FlowCraftGUI window = new FlowCraftGUI(name, player2.getText());
+                    FlowCraftGUI window = new FlowCraftGUI(name, specie, player2.getText(), specie2);
                     window.setVisible(true);
                 }
             }
@@ -57,22 +59,62 @@ public class MenuGUI2 extends JFrame implements TableContract.Menu {
 
         human = new JButton();
         human.setText("Human");
-        human.setBounds(20,300, 100,50);
+        human.setActionCommand("human");
+        human.setBounds(20, 300, 100, 50);
+        human.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String command = e.getActionCommand();
+                if (command.equals("human")) {
+                    specie2 = 1;
+                }
+            }
+        });
         root.add(human);
 
         orc = new JButton();
         orc.setText("Orc");
-        orc.setBounds(120,300, 100,50);
+        orc.setActionCommand("orc");
+        orc.setBounds(120, 300, 100, 50);
+        orc.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String command = e.getActionCommand();
+                if (command.equals("orc")) {
+                    specie2 = 2;
+                }
+            }
+        });
         root.add(orc);
 
         goblin = new JButton();
         goblin.setText("Goblin");
-        goblin.setBounds(220,300, 100,50);
+        goblin.setActionCommand("goblin");
+        goblin.setBounds(220, 300, 100, 50);
+        goblin.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String command = e.getActionCommand();
+                if (command.equals("goblin")) {
+                    specie2 = 3;
+                }
+            }
+        });
         root.add(goblin);
 
         nightElf = new JButton();
         nightElf.setText("Night Elf");
-        nightElf.setBounds(320,300, 100,50);
+        nightElf.setActionCommand("nightElf");
+        nightElf.setBounds(320, 300, 100, 50);
+        nightElf.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String command = e.getActionCommand();
+                if (command.equals("nightElf")) {
+                    specie2 = 4;
+                }
+            }
+        });
         root.add(nightElf);
     }
 }

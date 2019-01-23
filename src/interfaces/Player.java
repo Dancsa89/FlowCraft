@@ -12,7 +12,7 @@ public class Player implements Species {
     private int stepPoints = 3;
     private int specie;
 
-    public Player(String name) {
+    public Player(String name, int specie) {
 
         this.name = name;
         this.specie = specie;

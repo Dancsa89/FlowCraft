@@ -12,9 +12,9 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
     private GameTable mainTable;
 
 
-    public Game(TableContract.View view, String player1, String player2) {
+    public Game(TableContract.View view, String player1, int specie1, String player2, int specie2) {
         this.view = view;
-        mainTable = new GameTable(player1, player2);
+        mainTable = new GameTable(player1, specie1, player2, specie2);
 
         view.showTable(mainTable.getCell());
         view.showPlayers(mainTable.getPlayers());

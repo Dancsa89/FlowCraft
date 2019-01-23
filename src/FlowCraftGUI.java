@@ -21,7 +21,7 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
     private JButton endRound;
     private JTextArea information;
 
-    public FlowCraftGUI(String player1, String player2) {
+    public FlowCraftGUI(String player1, int specie1, String player2, int specie2) {
         setTitle("FlowCraft");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(1000, 800);
@@ -78,7 +78,7 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
             presenter.onTableItemClicked(new Position(x, y));
         };
 
-        presenter = new Game(this, player1, player2);
+        presenter = new Game(this, player1, specie1, player2, specie2);
 
     }
 
