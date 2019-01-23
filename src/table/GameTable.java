@@ -15,7 +15,6 @@ public class GameTable {  // MODEL
     private GameTableCell[][] gameField = new GameTableCell[size][size];
     private Position selectedPosition;
     private List<Player> players = new ArrayList<>();
-    private List<GameTableCell> playersThings = new ArrayList<>();
     private int currentPlayerIndex = 0;
 
     public GameTable(String player1, int specie1, String player2, int specie2) {
@@ -45,10 +44,6 @@ public class GameTable {  // MODEL
 
     public GameTableCell getCellPosition(Position position) {
         return gameField[position.x][position.y];
-    }
-
-    public void addToPlayerThing(GameTableCell cellitem) {
-        playersThings.add(cellitem);
     }
 
     public void moveCellItem(Position from, Position to) {
@@ -99,7 +94,7 @@ public class GameTable {  // MODEL
         if (player.getStepPoints() <= 0) {
             for (int i = 0; i < gameField.length; i++) {
                 for (int j = 0; j < gameField[i].length; j++) {
-                    if (gameField[i][j] instanceof Bank) {
+                    if (gameField[i][j] instanceof Bank && gameField[i][j].getOwner().equals(getCurrentPlayer())) {
                         index++;
                     }
                 }
@@ -117,8 +112,6 @@ public class GameTable {  // MODEL
     public List<Player> getPlayers() {
         return players;
     }
-
-    public List<GameTableCell> getPlayersThings() { return playersThings; }
 
     public boolean isValidStep(Position from, Position to) {
         GameTableCell c = getCellPosition(from);
