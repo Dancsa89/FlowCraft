@@ -1,3 +1,4 @@
+import interfaces.Player;
 import interfaces.TableContract;
 
 import javax.swing.*;
@@ -15,7 +16,7 @@ public class MenuGUI2 extends JFrame implements TableContract.Menu {
     private JButton nightElf;
     private JTextArea welcome;
 
-    public MenuGUI2() {
+    public MenuGUI2(String name) {
         setTitle("FlowCraft - Menu");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(450, 500);
@@ -47,7 +48,7 @@ public class MenuGUI2 extends JFrame implements TableContract.Menu {
                 String start = e.getActionCommand();
                 if (start.equals("start")) {
                     getDefaultCloseOperation();
-                    FlowCraftGUI window = new FlowCraftGUI();
+                    FlowCraftGUI window = new FlowCraftGUI(name, player2.getText());
                     window.setVisible(true);
                 }
             }

@@ -12,9 +12,9 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
     private GameTable mainTable;
 
 
-    public Game(TableContract.View view) {
+    public Game(TableContract.View view, String player1, String player2) {
         this.view = view;
-        mainTable = new GameTable();
+        mainTable = new GameTable(player1, player2);
 
         view.showTable(mainTable.getCell());
         view.showPlayers(mainTable.getPlayers());
@@ -37,7 +37,6 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
                 } else {
                     attackItem(position, selectedPosition);
                     nextPlayer();
-                   // redraw();
                 }
             }
         } else {
@@ -48,15 +47,12 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
                         selectedItem.getOwner().equals(currentPlayer)) {
                     moveItem(position, selectedPosition);
                     nextPlayer();
-                   // redraw();
                 }
             } else {
                 choice(position);
                 nextPlayer();
-               // redraw();
             }
         }
-       // redraw();
     }
 
     private void redraw() {

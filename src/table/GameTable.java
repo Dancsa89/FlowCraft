@@ -18,9 +18,9 @@ public class GameTable {  // MODEL
     private List<GameTableCell> playersThings = new ArrayList<>();
     private int currentPlayerIndex = 0;
 
-    public GameTable() {
-        players.add(new Player("Dani", "Human"));
-        players.add(new Player("Player2", "Goblin"));
+    public GameTable(String player1, String player2) {
+        players.add(new Player(player1));
+        players.add(new Player(player2));
         addHero(0, 9);
         suddenlyNextPlayer();
         addHero(9, 0);

@@ -10,9 +10,9 @@ public class Player implements Species {
     private int goods = 200;
     private int income = 50;
     private int stepPoints = 3;
-    private String specie;
+    private int specie;
 
-    public Player(String name, String specie) {
+    public Player(String name) {
 
         this.name = name;
         this.specie = specie;

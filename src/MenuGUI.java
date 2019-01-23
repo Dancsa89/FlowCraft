@@ -46,8 +46,9 @@ public class MenuGUI extends JFrame implements TableContract.Menu {
             public void actionPerformed(ActionEvent e) {
                 String start = e.getActionCommand();
                 if (start.equals("start")) {
+
                     getDefaultCloseOperation();
-                    MenuGUI2 window = new MenuGUI2();
+                    MenuGUI2 window = new MenuGUI2(player1.getText());
                     window.setVisible(true);
                 }
             }
