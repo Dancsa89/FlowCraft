@@ -6,6 +6,8 @@ import interfaces.TableContract;
 import species.units.*;
 import table.GameTable;
 
+import java.util.List;
+
 public class Game implements TableContract.Presenter { // PRESENTER, here is Logic
 
     private TableContract.View view;
@@ -20,6 +22,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
         view.showPlayers(mainTable.getPlayers());
         view.selectCurrentPlayer(mainTable.getCurrentPlayer());
         view.showGoods(mainTable.getCurrentPlayer());
+        highlightCurrentPlayersUnits();
     }
 
     @Override
@@ -59,6 +62,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
         view.showPlayers(mainTable.getPlayers());
         view.selectCurrentPlayer(mainTable.getCurrentPlayer());
         view.showGoods(mainTable.getCurrentPlayer());
+        highlightCurrentPlayersUnits();
     }
 
     private void highlightItemRange(Position itemPosition, GameTableCell item) {
@@ -75,15 +79,18 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
         view.highlightRange(range, item.canMoveOutOfAxis() ? null : itemPosition);
     }
 
-   /* private void highlightOwnedCellItems(Position position, Player player, GameTableCell cell) {
-        view.highlightOwnedCells(player, cell);
-    } */
+    private void highlightCurrentPlayersUnits() {
+        List<Position> currentPlayersItemPositions = mainTable.getCurrentPlayersItemPositions();
+        view.highlightPlayersUnits(currentPlayersItemPositions);
+    }
 
     private void nextPlayer() {
         Player currentPlayer = mainTable.getCurrentPlayer();
         currentPlayer.setStepPoints(1);
         mainTable.nextPlayer();
         view.selectCurrentPlayer(mainTable.getCurrentPlayer());
+        view.removeHighlightPlayersUnits();
+        highlightCurrentPlayersUnits();
 
         Position selectedPosition = mainTable.getSelectedPosition();
         if (selectedPosition != null) {
@@ -103,6 +110,8 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
         mainTable.nextPlayer();
         view.selectCurrentPlayer(mainTable.getCurrentPlayer());
         view.showGoods(mainTable.getCurrentPlayer());
+        view.removeHighlightPlayersUnits();
+        highlightCurrentPlayersUnits();
         if (currentPlayer.getStepPoints() <= 0) {
             currentPlayer.stepPointsPositive();
         }

@@ -66,7 +66,7 @@ public class Player implements Species {
         } else if (specie == 4) {
             fullInformation += "Night Elf";
         }
-        return name + " " + "Specie:" + " " + fullInformation;
+        return name + " " + "," + "Specie:" + " " + fullInformation;
     }
 
     @Override

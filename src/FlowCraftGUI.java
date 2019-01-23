@@ -197,6 +197,15 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
     }
 
     @Override
+    public void highlightPlayersUnits(List<Position> positions) {
+        for (Position position : positions) {
+            JButton btn = (JButton) layoutButtons.getComponent(position.x * 10 + position.y);
+
+            btn.setBackground(Color.CYAN);
+        }
+    }
+
+    @Override
     public void highlightRange(Range range, Position center) {
         for (int i = range.topLeft.x; i <= range.bottomRight.x; i++) {
             for (int j = range.topLeft.y; j <= range.bottomRight.y; j++) {
@@ -209,25 +218,19 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
         }
     }
 
-   /* @Override
-    public void highlightOwnedCells(Player player, GameTableCell cellitem) {
-        for (int i = 0; i < layoutButtons.getComponentCount(); i++) {
-            for (int j = 0; j < layoutButtons.getComponentCount(); j++) {
-                int index = i * 10 + j;
-                JButton btn = (JButton) layoutButtons.getComponent(index);
-
-                if (cellitem.getOwner().equals(player.toString())) {
-                    btn.setBorder(BorderFactory.createLineBorder(Color.BLUE));
-                }
-            }
-        }
-    } */
-
     @Override
     public void removeHighlight() {
         for (int i = 0; i < layoutButtons.getComponentCount(); i++) {
             ((JButton) layoutButtons.getComponent(i))
                     .setBorder(BorderFactory.createLineBorder(Color.white));
+        }
+    }
+
+    @Override
+    public void removeHighlightPlayersUnits() {
+        for (int i = 0; i < layoutButtons.getComponentCount(); i++) {
+            ((JButton) layoutButtons.getComponent(i))
+                    .setBackground(Color.lightGray);
         }
     }
 }

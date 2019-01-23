@@ -19,7 +19,8 @@ public interface TableContract {
 
         void highlightRange(Range range, Position center);
         void removeHighlight();
-       // void highlightOwnedCells();
+        void highlightPlayersUnits(List<Position> positions);
+        void removeHighlightPlayersUnits();
     }
 
     interface Menu {

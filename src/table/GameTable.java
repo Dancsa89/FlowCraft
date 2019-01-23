@@ -121,4 +121,22 @@ public class GameTable {  // MODEL
                 Math.abs(from.x - to.x) <= c.maxStep() &&
                 Math.abs(from.y - to.y) <= c.maxStep();
     }
+
+    public List<Position> getCurrentPlayersItemPositions() {
+        List<Position> result = new ArrayList<>();
+
+        Player currentPlayer = getCurrentPlayer();
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                Position position = new Position(i, j);
+
+                GameTableCell cellItem = getCellPosition(position);
+                if (cellItem != null && cellItem.getOwner().equals(currentPlayer)) {
+                    result.add(position);
+                }
+            }
+        }
+
+        return result;
+    }
 }
