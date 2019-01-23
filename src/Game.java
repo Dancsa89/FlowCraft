@@ -39,6 +39,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
                     highlightItemRange(position, cellItem);
                     view.showInfo(cellItem);
                 } else {
+                    bloodLust(position);
                     attackItem(position, selectedPosition);
                     nextPlayer();
                 }
@@ -126,6 +127,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
         currentPlayer.setRoundCount(1);
         if (currentPlayer.getSpecie() == 2 && currentPlayer.getRoundCount() == 7) {
             currentPlayer.orc(mainTable.getCellPosition(position));
+            currentPlayer.setRoundCount(-7);
         }
     }
 
@@ -192,22 +194,38 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
         switch (choiceUnit) {
             case 0:
                 cellItem = new Bowman(currentPlayer);
-                currentPlayer.setGoods(cellItem.getPrice());
+                if (currentPlayer.getSpecie() == 1) {
+                    currentPlayer.setGoods(currentPlayer.human(cellItem));
+                } else {
+                    currentPlayer.setGoods(cellItem.getPrice());
+                }
                 redraw();
                 break;
             case 1:
                 cellItem = new Catapult(currentPlayer);
-                currentPlayer.setGoods(cellItem.getPrice());
+                if (currentPlayer.getSpecie() == 1) {
+                    currentPlayer.setGoods(currentPlayer.human(cellItem));
+                } else {
+                    currentPlayer.setGoods(cellItem.getPrice());
+                }
                 redraw();
                 break;
             case 2:
                 cellItem = new Healer(currentPlayer);
-                currentPlayer.setGoods(cellItem.getPrice());
+                if (currentPlayer.getSpecie() == 1) {
+                    currentPlayer.setGoods(currentPlayer.human(cellItem));
+                } else {
+                    currentPlayer.setGoods(cellItem.getPrice());
+                }
                 redraw();
                 break;
             case 3:
                 cellItem = new Warrior(currentPlayer);
-                currentPlayer.setGoods(cellItem.getPrice());
+                if (currentPlayer.getSpecie() == 1) {
+                    currentPlayer.setGoods(currentPlayer.human(cellItem));
+                } else {
+                    currentPlayer.setGoods(cellItem.getPrice());
+                }
                 redraw();
                 break;
         }
@@ -228,27 +246,47 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
         switch (choiceBuilding) {
             case 0:
                 cellItem = new Farm(currentPlayer);
-                currentPlayer.setGoods(cellItem.getPrice());
+                if (currentPlayer.getSpecie() == 1) {
+                    currentPlayer.setGoods(currentPlayer.human(cellItem));
+                } else {
+                    currentPlayer.setGoods(cellItem.getPrice());
+                }
                 redraw();
                 break;
             case 1:
                 cellItem = new Barrack(currentPlayer);
-                currentPlayer.setGoods(cellItem.getPrice());
+                if (currentPlayer.getSpecie() == 1) {
+                    currentPlayer.setGoods(currentPlayer.human(cellItem));
+                } else {
+                    currentPlayer.setGoods(cellItem.getPrice());
+                }
                 redraw();
                 break;
             case 2:
                 cellItem = new Tower(currentPlayer);
-                currentPlayer.setGoods(cellItem.getPrice());
+                if (currentPlayer.getSpecie() == 1) {
+                    currentPlayer.setGoods(currentPlayer.human(cellItem));
+                } else {
+                    currentPlayer.setGoods(cellItem.getPrice());
+                }
                 redraw();
                 break;
             case 3:
                 cellItem = new Bank(currentPlayer);
-                currentPlayer.setGoods(cellItem.getPrice());
+                if (currentPlayer.getSpecie() == 1) {
+                    currentPlayer.setGoods(currentPlayer.human(cellItem));
+                } else {
+                    currentPlayer.setGoods(cellItem.getPrice());
+                }
                 redraw();
                 break;
             case 4:
                 cellItem = new TownHall(currentPlayer);
-                currentPlayer.setGoods(cellItem.getPrice());
+                if (currentPlayer.getSpecie() == 1) {
+                    currentPlayer.setGoods(currentPlayer.human(cellItem));
+                } else {
+                    currentPlayer.setGoods(cellItem.getPrice());
+                }
                 redraw();
                 break;
         }
