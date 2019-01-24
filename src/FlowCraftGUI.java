@@ -2,7 +2,9 @@ import interfaces.Player;
 import interfaces.Position;
 import interfaces.Range;
 import interfaces.TableContract;
+import species.units.Bowman;
 import species.units.GameTableCell;
+import species.units.Hero;
 import table.GameTable;
 
 import javax.swing.*;

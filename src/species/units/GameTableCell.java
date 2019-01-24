@@ -3,6 +3,8 @@ package species.units;
 import interfaces.Player;
 import interfaces.Species;
 
+import javax.swing.*;
+
 public abstract class GameTableCell {
 
     private final Player owner;
@@ -11,6 +13,7 @@ public abstract class GameTableCell {
     private int damage;
     private final int originalDamage;
     private final int price;
+    private Icon icon;
 
     public GameTableCell(Player owner, String title, int life, int damage, int originalDamage, int price) {
         this.owner = owner;
@@ -51,6 +54,10 @@ public abstract class GameTableCell {
         this.damage = this.damage + plus;
     }
 
+    public void setOriginalDamage() {
+        this.damage = this.originalDamage;
+    }
+
     public String toString() {
         return title.charAt(0) + "_" + owner.getName().charAt(0);
     }
@@ -59,5 +66,6 @@ public abstract class GameTableCell {
             + "Life:" + " " + life + "\n\r"
             + "Damage:" + " " + damage + "\n\r";
     }
+
 
 }

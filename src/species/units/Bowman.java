@@ -2,6 +2,8 @@ package species.units;
 
 import interfaces.Player;
 
+import javax.swing.*;
+
 public class Bowman extends GameTableCell {
 
     public Bowman(Player owner) {
@@ -22,5 +24,4 @@ public class Bowman extends GameTableCell {
     public boolean canMoveOutOfAxis() {
         return true;
     }
-
 }

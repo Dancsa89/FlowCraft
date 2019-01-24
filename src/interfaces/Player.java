@@ -24,7 +24,7 @@ public class Player implements Species {
     public int getGoods() { return goods; }
 
     public String toStringGoods() {
-        return "Goods:" + " " + Integer.toString(this.goods);
+        return "Gold:" + " " + Integer.toString(this.goods);
     }
 
     public int getIncome() { return income; }

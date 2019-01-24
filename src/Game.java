@@ -53,6 +53,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
                         mainTable.isValidStep(selectedPosition, position) &&
                         selectedItem.getOwner().equals(currentPlayer)) {
                     moveItem(position, selectedPosition);
+                    bloodLust(position);
                     nextPlayer();
                 }
             } else {
@@ -129,6 +130,12 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
         if (currentPlayer.getSpecie() == 2 && currentPlayer.getRoundCount() == 7) {
             currentPlayer.orc(mainTable.getCellPosition(position));
             currentPlayer.setRoundCount(-7);
+        }
+    }
+
+    public void bloodLustOff(Player player, GameTableCell cell) {
+        if (player.getRoundCount() == 0) {
+            cell.setOriginalDamage();
         }
     }
 
