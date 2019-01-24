@@ -101,7 +101,6 @@ public class GameTable {  // MODEL
             }
             if (player.getSpecie() == 3) {
                 player.setGoods2(player.goblin());
-                player.goodsPlusIncome(index);
             } else {
                 player.goodsPlusIncome(index);
             }

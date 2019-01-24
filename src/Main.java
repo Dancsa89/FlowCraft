@@ -6,6 +6,7 @@ import table.GameTable;
 
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
@@ -19,18 +20,17 @@ public class Main {
         EventQueue.invokeLater(() -> {
             MenuGUI menu = new MenuGUI();
             menu.setVisible(true);
-            //music();
 
         });
     }
 
-    public static void music(){
+    public static void music() {
         AudioPlayer MGP = AudioPlayer.player;
         AudioStream BGM;
         AudioData MD;
         ContinuousAudioDataStream loop = null;
         try{
-            BGM = new AudioStream(new FileInputStream("C:\\test\\ha.wav"));
+            BGM = new AudioStream(new FileInputStream(new File("./home/Documents/Smetana _ Moldau.wav")));
             MD = BGM.getData();
             loop = new ContinuousAudioDataStream(MD);
         }catch(IOException error){
