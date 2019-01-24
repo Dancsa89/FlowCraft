@@ -2,22 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4b1f1e7-8948-427f-b32d-f04351d57ab8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FlowCraftGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FlowCraftGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/buildings/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buildings/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/buildings/Barrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buildings/Barrack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/buildings/Farm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buildings/Farm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/buildings/Tower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buildings/Tower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/buildings/TownHall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buildings/TownHall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/TableContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/TableContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/species/units/Bowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/species/units/Bowman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/species/units/Catapult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/species/units/Catapult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/species/units/GameTableCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/species/units/GameTableCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/species/units/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/species/units/Healer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/species/units/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/species/units/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/species/units/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/species/units/Warrior.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/table/GameTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/table/GameTable.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -68,12 +52,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="5" />
-          <entry key="java" value="24645" />
+          <entry key="java" value="24658" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="24645" />
+          <entry key="JAVA" value="24658" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
@@ -84,13 +68,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/table/GameTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="99" column="57" selection-start-line="99" selection-start-column="57" selection-end-line="99" selection-end-column="57" />
+            <state relative-caret-position="76">
+              <caret line="93" selection-start-line="93" selection-end-line="93" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3710#3711#0" expanded="true" />
+                <element signature="e#3796#3797#0" expanded="true" />
+                <element signature="e#3836#3837#0" expanded="true" />
+                <element signature="e#3866#3867#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="91">
+              <caret line="127" selection-start-line="127" selection-end-line="127" />
             </state>
           </provider>
         </entry>
@@ -117,11 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/interfaces/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="50" column="49" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+            <state relative-caret-position="76">
+              <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#958#959#0" expanded="true" />
@@ -152,8 +140,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/species/units/GameTableCell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="30" />
+            <state relative-caret-position="274">
+              <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1048#1049#0" expanded="true" />
@@ -192,8 +180,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FlowCraftGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="130" column="22" selection-start-line="130" selection-start-column="22" selection-end-line="130" selection-end-column="22" />
+            <state relative-caret-position="130">
+              <caret line="119" column="45" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -334,7 +322,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548322937059" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548324370296" />
     <property name="last_opened_file_path" value="$USER_HOME$/Game 5" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -381,18 +369,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="698" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49395162" visible="true" weight="0.20378788" />
-      <window_info id="Structure" order="1" sideWeight="0.5060484" side_tool="true" weight="0.25984848" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49116609" visible="true" weight="0.20378788" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Structure" order="5" sideWeight="0.50883394" side_tool="true" visible="true" weight="0.20378788" />
       <window_info id="Favorites" order="6" sideWeight="0.50176054" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32922536" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3221831" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.10387324" />
       <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.50176054" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -461,15 +448,39 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/table/GameTable.java</url>
-          <line>105</line>
+          <line>94</line>
           <properties />
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/table/GameTable.java</url>
-          <line>103</line>
+          <line>93</line>
           <properties />
-          <option name="timeStamp" value="9" />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Game.java</url>
+          <line>126</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Game.java</url>
+          <line>127</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Game.java</url>
+          <line>130</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Game.java</url>
+          <line>129</line>
+          <properties />
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/interfaces/Player.java</url>
@@ -489,9 +500,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/interfaces/Player.java</url>
-          <line>13</line>
-          <properties field="stepPoints" class="interfaces.Player" />
-          <option name="timeStamp" value="12" />
+          <line>15</line>
+          <properties field="roundCount" class="interfaces.Player" />
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -739,10 +750,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/FlowCraftGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="119" column="45" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/species/units/GameTableCell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="30" />
+        <state relative-caret-position="274">
+          <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1048#1049#0" expanded="true" />
@@ -751,17 +769,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FlowCraftGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/table/GameTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="130" column="22" selection-start-line="130" selection-start-column="22" selection-end-line="130" selection-end-column="22" />
+        <state relative-caret-position="76">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3710#3711#0" expanded="true" />
+            <element signature="e#3796#3797#0" expanded="true" />
+            <element signature="e#3836#3837#0" expanded="true" />
+            <element signature="e#3866#3867#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/interfaces/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="50" column="49" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+        <state relative-caret-position="76">
+          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#958#959#0" expanded="true" />
@@ -772,23 +804,6 @@
             <element signature="e#1185#1186#0" expanded="true" />
             <element signature="e#1208#1209#0" expanded="true" />
             <element signature="e#1243#1244#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/table/GameTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="99" column="57" selection-start-line="99" selection-start-column="57" selection-end-line="99" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

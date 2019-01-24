@@ -92,7 +92,7 @@ public class GameTable {  // MODEL
         int index = 0;
         Player player = getCurrentPlayer();
         if (player.getSpecie() == 4 && player.nightElf()) {
-            player.nightElfStepPoints(3);
+            player.nightElfStepPoints(1);
         } else if (player.getStepPoints() <= 0) {
             for (int i = 0; i < gameField.length; i++) {
                 for (int j = 0; j < gameField[i].length; j++) {
