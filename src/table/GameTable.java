@@ -91,23 +91,25 @@ public class GameTable {  // MODEL
     public void nextPlayer() {
         int index = 0;
         Player player = getCurrentPlayer();
-        if (player.getStepPoints() <= 0) {
+        if (player.getSpecie() == 4 && player.nightElf()) {
+            player.nightElfStepPoints(3);
+        } else if (player.getStepPoints() <= 0) {
             for (int i = 0; i < gameField.length; i++) {
                 for (int j = 0; j < gameField[i].length; j++) {
                     if (gameField[i][j] instanceof Bank && gameField[i][j].getOwner().equals(player)) {
                         index++;
+                        }
                     }
                 }
+                if (player.getSpecie() == 3) {
+                    player.setGoods2(player.goblin());
+                } else {
+                    player.goodsPlusIncome(index);
+                }
+                currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
             }
-            if (player.getSpecie() == 3) {
-                player.setGoods2(player.goblin());
-            } else {
-                player.goodsPlusIncome(index);
-            }
-            currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
-        }
 
-    }
+        }
 
     public void suddenlyNextPlayer() {
             currentPlayerIndex = (currentPlayerIndex + 1) % players.size();

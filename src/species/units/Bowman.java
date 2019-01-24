@@ -5,7 +5,7 @@ import interfaces.Player;
 public class Bowman extends GameTableCell {
 
     public Bowman(Player owner) {
-        super(owner, "Bowman", 250, 25, 15);
+        super(owner, "Bowman", 250, 25, 25,15);
     }
 
     @Override

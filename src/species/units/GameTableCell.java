@@ -9,14 +9,16 @@ public abstract class GameTableCell {
     private final String title;
     private int life;
     private int damage;
+    private final int originalDamage;
     private final int price;
 
-    public GameTableCell(Player owner, String title, int life, int damage, int price) {
+    public GameTableCell(Player owner, String title, int life, int damage, int originalDamage, int price) {
         this.owner = owner;
         this.title = title;
         this.life = life;
         this.damage = damage;
         this.price = price;
+        this.originalDamage = originalDamage;
     }
 
     public abstract boolean isMovable();
@@ -39,6 +41,10 @@ public abstract class GameTableCell {
 
     public int getDamage() {
         return damage;
+    }
+
+    public int getOriginalDamage() {
+        return originalDamage;
     }
 
     public void setDamage(int plus) {

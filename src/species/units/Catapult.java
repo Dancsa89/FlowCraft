@@ -5,7 +5,7 @@ import interfaces.Player;
 public class Catapult extends GameTableCell {
 
     public Catapult(Player owner) {
-        super(owner, "Catapult", 750, 150, 75);
+        super(owner, "Catapult", 750, 150, 150, 75);
     }
 
     @Override

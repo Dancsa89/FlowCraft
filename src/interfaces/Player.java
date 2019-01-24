@@ -47,6 +47,10 @@ public class Player implements Species {
         this.stepPoints = this.stepPoints - dec;
     }
 
+    public void nightElfStepPoints(int plus) {
+        this.stepPoints = this.stepPoints + plus;
+    }
+
     public int getStepPoints() {
         return stepPoints;
     }
@@ -102,7 +106,12 @@ public class Player implements Species {
 
     @Override
     public void orc(GameTableCell cellitem) {
-        int overDamaged = (int) (cellitem.getDamage() * 0.75);
+        double over = 0.25;
+        int original = cellitem.getOriginalDamage();
+        int overDamaged = (int) (original * over);
         cellitem.setDamage(overDamaged);
+        if (stepPoints == 0) {
+            cellitem.setDamage(cellitem.getOriginalDamage());
+        }
     }
 }

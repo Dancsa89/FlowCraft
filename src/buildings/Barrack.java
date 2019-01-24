@@ -6,7 +6,7 @@ import species.units.GameTableCell;
 public class Barrack extends GameTableCell {
 
     public Barrack(Player owner) {
-        super(owner, "Barrack", 2500, 0, 75);
+        super(owner, "Barrack", 2500, 0, 0, 75);
     }
 
     @Override

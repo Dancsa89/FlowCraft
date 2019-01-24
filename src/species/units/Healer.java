@@ -6,7 +6,7 @@ import interfaces.Position;
 public class Healer extends GameTableCell {
 
     public Healer(Player owner) {
-        super(owner, "Healer", 150, 35, 40);
+        super(owner, "Healer", 150, 35, 35, 40);
     }
 
     @Override

@@ -6,7 +6,7 @@ import species.units.GameTableCell;
 public class Tower extends GameTableCell {
 
     public Tower(Player owner) {
-        super(owner, "Tower", 1000, 20, 40);
+        super(owner, "Tower", 1000, 20, 20, 40);
     }
 
     @Override

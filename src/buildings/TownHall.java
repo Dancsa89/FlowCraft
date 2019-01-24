@@ -6,7 +6,7 @@ import species.units.GameTableCell;
 public class TownHall extends GameTableCell {
 
     public TownHall(Player owner) {
-        super(owner, "Townhall", 4500, 15, 100);
+        super(owner, "Townhall", 4500, 15, 15, 100);
     }
 
     @Override

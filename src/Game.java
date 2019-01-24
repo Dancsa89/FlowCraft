@@ -38,9 +38,10 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
                 if (cellItem.getOwner().equals(currentPlayer)) {
                     highlightItemRange(position, cellItem);
                     view.showInfo(cellItem);
-                } else {
                     bloodLust(position);
+                } else {
                     attackItem(position, selectedPosition);
+                    bloodLust(position);
                     nextPlayer();
                 }
             }
@@ -169,9 +170,11 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
 
             view.updateCellItem(position, mainTable.getCellPosition(position));
             view.updateCellItem(selectedPosition, mainTable.getCellPosition(selectedPosition));
+            view.afterAttacRemove(selectedPosition, mainTable.getCellPosition(selectedPosition));
 
             view.removeHighlight();
         }
+        redraw();
     }
 
     private void choice(Position position) {

@@ -70,21 +70,11 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
         });
         root.add(endRound);
 
-        bloodlust = new JButton();
+       /* bloodlust = new JButton();
         bloodlust.setBounds(760,440,150,50);
         bloodlust.setText("Bloodlust");
         bloodlust.setActionCommand("bloodlust");
-        bloodlust.setEnabled(false);
-        bloodlust.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String command = e.getActionCommand();
-                if (command.equals("bloodlust")) {
-                    //TODO: bloodlust
-                }
-            }
-        });
-        root.add(bloodlust);
+        bloodlust.setEnabled(false); */
 
         actionListener = e -> {
             String[] s = e.getActionCommand().split(" ");
@@ -142,6 +132,15 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
         JButton btn = (JButton) layoutButtons.getComponent(position.x * 10 + position.y);
 
         btn.setText(cellItem != null ? cellItem.toString() : null);
+    }
+
+    @Override
+    public void afterAttacRemove(Position position, GameTableCell cellItem) {
+        JButton btn = (JButton) layoutButtons.getComponent(position.x * 10 + position.y);
+
+        if (cellItem != null && cellItem.getLife() <= 0) {
+            btn.setText(null);
+        }
     }
 
     @Override

@@ -11,7 +11,7 @@ public class Hero extends GameTableCell {
     private final int value = 1;
 
     public Hero(Player owner) {
-        super(owner,"Hero", 800, 60, 0);
+        super(owner,"Hero", 800, 60, 60, 0);
     }
 
     @Override
