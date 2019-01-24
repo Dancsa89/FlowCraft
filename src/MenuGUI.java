@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MenuGUI extends JFrame implements TableContract.Menu {
+public class MenuGUI extends JFrame {
 
     private JButton start;
     private JButton human;

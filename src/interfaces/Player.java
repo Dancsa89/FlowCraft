@@ -110,8 +110,5 @@ public class Player implements Species {
         int original = cellitem.getOriginalDamage();
         int overDamaged = (int) (original * over);
         cellitem.setDamage(overDamaged);
-        if (stepPoints == 0) {
-            cellitem.setDamage(cellitem.getOriginalDamage());
-        }
     }
 }

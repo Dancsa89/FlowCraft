@@ -32,6 +32,7 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
         Player currentPlayer = mainTable.getCurrentPlayer();
 
         Position selectedPosition = mainTable.getSelectedPosition();
+
         if (cellItem != null) {
             view.removeHighlight();
             if (changeItemSelection(position, selectedPosition)) {
@@ -125,7 +126,6 @@ public class Game implements TableContract.Presenter { // PRESENTER, here is Log
     @Override
     public void bloodLust(Position position) {
         Player currentPlayer = mainTable.getCurrentPlayer();
-        currentPlayer.setRoundCount(1);
         if (currentPlayer.getSpecie() == 2 && currentPlayer.getRoundCount() == 7) {
             currentPlayer.orc(mainTable.getCellPosition(position));
             currentPlayer.setRoundCount(-7);

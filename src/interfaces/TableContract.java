@@ -24,10 +24,6 @@ public interface TableContract {
         void removeHighlightPlayersUnits();
     }
 
-    interface Menu {
-
-    }
-
     interface Presenter {
         void onTableItemClicked(Position position);
         void endRound();

@@ -107,6 +107,7 @@ public class GameTable {  // MODEL
                     player.goodsPlusIncome(index);
                 }
                 currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
+                player.setRoundCount(1);
             }
 
         }

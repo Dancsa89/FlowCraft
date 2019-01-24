@@ -6,7 +6,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MenuGUI2 extends JFrame implements TableContract.Menu {
+public class MenuGUI2 extends JFrame {
 
     private JButton start;
     private JTextField player2;
