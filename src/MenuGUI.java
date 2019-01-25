@@ -31,7 +31,8 @@ public class MenuGUI extends JFrame {
         welcome.setBounds(20, 20, 400, 100);
         welcome.setBackground(Color.lightGray);
         welcome.setLayout(null);
-        welcome.setText("Welcome to FlowCraft! \n Please write in youre name, and select specie!");;
+        welcome.setFont(new Font(Font.MONOSPACED, Font.BOLD, 24));
+        welcome.setText("    Welcome to FlowCraft! \n Please write in youre name, \n     and select specie!");
         root.add(welcome);
 
         player1 = new JTextField();
