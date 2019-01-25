@@ -6,9 +6,7 @@ import table.GameTable;
 
 import java.awt.*;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
 
 public class Main {
 
@@ -20,23 +18,34 @@ public class Main {
         EventQueue.invokeLater(() -> {
             MenuGUI menu = new MenuGUI();
             menu.setVisible(true);
-
+            music();
         });
     }
 
-    public static void music() {
+    public static void music()
+    {
         AudioPlayer MGP = AudioPlayer.player;
         AudioStream BGM;
         AudioData MD;
+
         ContinuousAudioDataStream loop = null;
-        try{
-            BGM = new AudioStream(new FileInputStream(new File("./home/Documents/Smetana _ Moldau.wav")));
+
+        try
+        {
+            InputStream test = new FileInputStream("/home/dani/Documents/Smetana _ Moldau.wav");
+            BGM = new AudioStream(test);
+            AudioPlayer.player.start(BGM);
             MD = BGM.getData();
             loop = new ContinuousAudioDataStream(MD);
-        }catch(IOException error){
-            System.out.print("file not found");
-        }
 
+        }
+        catch(FileNotFoundException e){
+            System.out.print(e.toString());
+        }
+        catch(IOException error)
+        {
+            System.out.print(error.toString());
+        }
         MGP.start(loop);
     }
 }
