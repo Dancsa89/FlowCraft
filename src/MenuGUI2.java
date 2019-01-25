@@ -15,6 +15,7 @@ public class MenuGUI2 extends JFrame {
     private JButton goblin;
     private JButton nightElf;
     private JTextArea welcome;
+    private JLabel backGround;
     private int specie2;
 
     public MenuGUI2(String name, int specie) {
@@ -117,6 +118,14 @@ public class MenuGUI2 extends JFrame {
             }
         });
         root.add(nightElf);
+
+        backGround = new JLabel();
+        backGround.setIcon(new ImageIcon("/home/dani/FlowCraft/src/icons/rsz_pic31810.png"));
+        backGround.setBounds(0, 0,450,500);
+        backGround.setLayout(null);
+        backGround.setOpaque(true);
+
+        root.add(backGround);
     }
 }
 

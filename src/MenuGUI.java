@@ -14,6 +14,7 @@ public class MenuGUI extends JFrame {
     private JButton nightElf;
     private JTextField player1;
     private JTextArea welcome;
+    private JLabel backGround;
     private int specie;
 
     public MenuGUI() {
@@ -115,5 +116,13 @@ public class MenuGUI extends JFrame {
             }
         });
         root.add(nightElf);
+
+        backGround = new JLabel();
+        backGround.setIcon(new ImageIcon("/home/dani/FlowCraft/src/icons/rsz_pic31810.png"));
+        backGround.setBounds(0, 0,450,500);
+        backGround.setLayout(null);
+        backGround.setOpaque(true);
+
+        root.add(backGround);
     }
 }

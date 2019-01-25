@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4b1f1e7-8948-427f-b32d-f04351d57ab8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/FlowCraftGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FlowCraftGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MenuGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MenuGUI2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuGUI2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icons/rsz_archer.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_archer.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icons/rsz_bank.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_bank.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icons/rsz_barrack.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_barrack.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icons/rsz_catapult.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_catapult.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icons/rsz_farm.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_farm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icons/rsz_fortress_tower.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_fortress_tower.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icons/rsz_hero.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_hero.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icons/rsz_red_cross-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_red_cross-512.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icons/rsz_townhall.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_townhall.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icons/rsz_warrior.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_warrior.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/species/units/Bowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/species/units/Bowman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/species/units/Catapult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/species/units/Catapult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/species/units/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/species/units/Healer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/species/units/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/species/units/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/species/units/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/species/units/Warrior.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,8 +41,8 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="16" />
-          <entry key="gitignore" value="1" />
-          <entry key="java" value="262" />
+          <entry key="gitignore" value="2" />
+          <entry key="java" value="263" />
           <entry key="png" value="5" />
         </counts>
       </usages-collector>
@@ -64,19 +50,19 @@
         <counts>
           <entry key="CLASS" value="16" />
           <entry key="Image" value="5" />
-          <entry key="JAVA" value="262" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="JAVA" value="263" />
+          <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="5" />
-          <entry key="java" value="26363" />
+          <entry key="java" value="26661" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="26363" />
+          <entry key="JAVA" value="26661" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
@@ -95,24 +81,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/buildings/Farm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="10" column="102" selection-start-line="10" selection-start-column="102" selection-end-line="10" selection-end-column="102" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/buildings/Tower.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="10" column="116" selection-start-line="10" selection-start-column="116" selection-end-line="10" selection-end-column="116" />
             </state>
           </provider>
         </entry>
@@ -147,6 +115,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/FlowCraftGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="31">
+              <caret line="44" column="35" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/species/units/Hero.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -156,10 +133,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/species/units/Warrior.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="285">
               <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -171,8 +148,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MenuGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+            <state relative-caret-position="91">
+              <caret line="119" selection-start-line="119" selection-end-line="125" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -181,10 +158,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MenuGUI2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+            <state relative-caret-position="-1439">
+              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -243,21 +225,27 @@
         <option value="$PROJECT_DIR$/src/Game.java" />
         <option value="$PROJECT_DIR$/src/interfaces/TableContract.java" />
         <option value="$PROJECT_DIR$/src/species/units/GameTableCell.java" />
-        <option value="$PROJECT_DIR$/src/FlowCraftGUI.java" />
         <option value="$PROJECT_DIR$/src/buildings/Bank.java" />
         <option value="$PROJECT_DIR$/src/buildings/Barrack.java" />
         <option value="$PROJECT_DIR$/src/buildings/Farm.java" />
         <option value="$PROJECT_DIR$/src/buildings/Tower.java" />
         <option value="$PROJECT_DIR$/src/buildings/TownHall.java" />
-        <option value="$PROJECT_DIR$/src/MenuGUI.java" />
-        <option value="$PROJECT_DIR$/src/MenuGUI2.java" />
         <option value="$PROJECT_DIR$/src/species/units/Warrior.java" />
         <option value="$PROJECT_DIR$/src/species/units/Hero.java" />
         <option value="$PROJECT_DIR$/src/species/units/Healer.java" />
         <option value="$PROJECT_DIR$/src/species/units/Catapult.java" />
         <option value="$PROJECT_DIR$/src/species/units/Bowman.java" />
+        <option value="$PROJECT_DIR$/src/MenuGUI.java" />
+        <option value="$PROJECT_DIR$/src/MenuGUI2.java" />
+        <option value="$PROJECT_DIR$/src/FlowCraftGUI.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="27" />
@@ -330,7 +318,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548408327534" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548410524486" />
     <property name="last_opened_file_path" value="$USER_HOME$/Game 5" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -404,8 +392,8 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32954547" />
+      <window_info anchor="right" id="Coverage" order="7" side_tool="true" weight="0.32954547" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32954547" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48767605" visible="true" weight="0.20984848" />
@@ -453,11 +441,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-720" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/unit.java" />
     <entry file="file://$PROJECT_DIR$/src/building/Building.java" />
     <entry file="file://$PROJECT_DIR$/src/interfaces.java" />
@@ -627,13 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FlowCraftGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="134" column="58" selection-start-line="134" selection-start-column="58" selection-end-line="134" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/buildings/Bank.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -669,26 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="10" column="114" selection-start-line="10" selection-start-column="114" selection-end-line="10" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MenuGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MenuGUI2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -728,11 +684,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/species/units/Warrior.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="285">
           <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MenuGUI2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1439">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MenuGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="119" selection-start-line="119" selection-end-line="125" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FlowCraftGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="44" column="35" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
         </state>
       </provider>
     </entry>

@@ -22,6 +22,7 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
     private JButton endRound;
     private JButton bloodlust;
     private JTextArea information;
+    private JLabel backGround;
 
     public FlowCraftGUI(String player1, int specie1, String player2, int specie2) {
         setTitle("FlowCraft");
@@ -35,29 +36,29 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
         add(root);
 
         layoutButtons = new JPanel();
-        layoutButtons.setBounds(0, 0, 680, 620);
+        layoutButtons.setBounds(0, 0, 600, 620);
         layoutButtons.setBackground(Color.LIGHT_GRAY);
         layoutButtons.setLayout(null);
         root.add(layoutButtons);
 
         layoutPlayers = new JPanel();
-        layoutPlayers.setBounds(760, 80, 150, 100);
+        layoutPlayers.setBounds(725, 80, 150, 100);
         layoutPlayers.setBackground(Color.LIGHT_GRAY);
         layoutPlayers.setLayout(new GridLayout(2, 1));
         root.add(layoutPlayers);
 
         layoutGoods = new JPanel();
-        layoutGoods.setBounds(760, 180, 150, 50);
+        layoutGoods.setBounds(725, 180, 150, 50);
         layoutGoods.setBackground(Color.LIGHT_GRAY);
         root.add(layoutGoods);
 
         information = new JTextArea();
-        information.setBounds(740, 280, 200,100);
+        information.setBounds(700, 280, 200,100);
         information.setFont(new Font("Helvetcia", Font.PLAIN, 20));
         root.add(information);
 
         endRound = new JButton();
-        endRound.setBounds(760,500,150,50);
+        endRound.setBounds(730,500,150,50);
         endRound.setText("End Round");
         endRound.setActionCommand("endRound");
         endRound.addActionListener(new ActionListener() {
@@ -86,6 +87,14 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
         };
 
         presenter = new Game(this, player1, specie1, player2, specie2);
+
+        backGround = new JLabel();
+        backGround.setIcon(new ImageIcon("/home/dani/FlowCraft/src/icons/Arthas.jpg"));
+        backGround.setBounds(0, 0,1000,800);
+        backGround.setLayout(null);
+        backGround.setOpaque(true);
+
+        root.add(backGround);
 
     }
 
