@@ -28,6 +28,6 @@ public class Hero extends GameTableCell {
 
     @Override
     public boolean canMoveOutOfAxis() {
-        return true;
+        return false;
     }
 }

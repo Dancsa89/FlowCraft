@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4b1f1e7-8948-427f-b32d-f04351d57ab8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlowCraftTest/FlowCraftTest.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FlowCraftGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FlowCraftGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/buildings/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buildings/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/buildings/Barrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buildings/Barrack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/buildings/Farm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buildings/Farm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/buildings/Tower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buildings/Tower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/buildings/TownHall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buildings/TownHall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MenuGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MenuGUI2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuGUI2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/rsz_archer.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_archer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/rsz_bank.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_bank.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/rsz_barrack.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_barrack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/rsz_catapult.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_catapult.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/rsz_farm.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_farm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/rsz_fortress_tower.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_fortress_tower.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/rsz_hero.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_hero.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/rsz_red_cross-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_red_cross-512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/rsz_townhall.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_townhall.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/rsz_warrior.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/rsz_warrior.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/species/units/Bowman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/species/units/Bowman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/species/units/Catapult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/species/units/Catapult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/species/units/GameTableCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/species/units/GameTableCell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/species/units/Healer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/species/units/Healer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/species/units/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/species/units/Hero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/species/units/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/species/units/Warrior.java" afterDir="false" />
@@ -53,7 +56,7 @@
         <counts>
           <entry key="class" value="16" />
           <entry key="gitignore" value="1" />
-          <entry key="java" value="259" />
+          <entry key="java" value="262" />
           <entry key="png" value="5" />
         </counts>
       </usages-collector>
@@ -61,19 +64,19 @@
         <counts>
           <entry key="CLASS" value="16" />
           <entry key="Image" value="5" />
-          <entry key="JAVA" value="259" />
+          <entry key="JAVA" value="262" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="5" />
-          <entry key="java" value="26317" />
+          <entry key="java" value="26363" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="26317" />
+          <entry key="JAVA" value="26363" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
@@ -85,24 +88,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/buildings/Bank.java">
+        <entry file="file://$PROJECT_DIR$/src/species/units/Bowman.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="10" column="104" selection-start-line="10" selection-start-column="104" selection-end-line="10" selection-end-column="104" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/icons/rsz_barrack.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/buildings/Barrack.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="10" column="109" selection-start-line="10" selection-start-column="109" selection-end-line="10" selection-end-column="109" />
+            <state relative-caret-position="196">
+              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,8 +129,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/species/units/Catapult.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="9" column="114" selection-start-line="9" selection-start-column="114" selection-end-line="9" selection-end-column="114" />
+            <state relative-caret-position="240">
+              <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -149,8 +141,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/species/units/Healer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="10" column="115" selection-start-line="10" selection-start-column="115" selection-end-line="10" selection-end-column="115" />
+            <state relative-caret-position="150">
+              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -158,8 +150,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/species/units/Hero.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="15" column="102" selection-start-line="15" selection-start-column="102" selection-end-line="15" selection-end-column="102" />
+            <state relative-caret-position="196">
+              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -167,8 +159,32 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/species/units/Warrior.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="110" selection-start-line="9" selection-start-column="110" selection-end-line="9" selection-end-column="110" />
+            <state relative-caret-position="240">
+              <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MenuGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MenuGUI2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="86">
+              <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -222,24 +238,24 @@
         <option value="$PROJECT_DIR$/src/Range.java" />
         <option value="$PROJECT_DIR$/src/interfaces/Species.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/MenuGUI.java" />
-        <option value="$PROJECT_DIR$/src/MenuGUI2.java" />
         <option value="$PROJECT_DIR$/src/table/GameTable.java" />
         <option value="$PROJECT_DIR$/src/interfaces/Player.java" />
         <option value="$PROJECT_DIR$/src/Game.java" />
         <option value="$PROJECT_DIR$/src/interfaces/TableContract.java" />
         <option value="$PROJECT_DIR$/src/species/units/GameTableCell.java" />
-        <option value="$PROJECT_DIR$/src/species/units/Bowman.java" />
         <option value="$PROJECT_DIR$/src/FlowCraftGUI.java" />
         <option value="$PROJECT_DIR$/src/buildings/Bank.java" />
         <option value="$PROJECT_DIR$/src/buildings/Barrack.java" />
         <option value="$PROJECT_DIR$/src/buildings/Farm.java" />
         <option value="$PROJECT_DIR$/src/buildings/Tower.java" />
         <option value="$PROJECT_DIR$/src/buildings/TownHall.java" />
-        <option value="$PROJECT_DIR$/src/species/units/Catapult.java" />
-        <option value="$PROJECT_DIR$/src/species/units/Healer.java" />
-        <option value="$PROJECT_DIR$/src/species/units/Hero.java" />
+        <option value="$PROJECT_DIR$/src/MenuGUI.java" />
+        <option value="$PROJECT_DIR$/src/MenuGUI2.java" />
         <option value="$PROJECT_DIR$/src/species/units/Warrior.java" />
+        <option value="$PROJECT_DIR$/src/species/units/Hero.java" />
+        <option value="$PROJECT_DIR$/src/species/units/Healer.java" />
+        <option value="$PROJECT_DIR$/src/species/units/Catapult.java" />
+        <option value="$PROJECT_DIR$/src/species/units/Bowman.java" />
       </list>
     </option>
   </component>
@@ -314,7 +330,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548407164035" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548408327534" />
     <property name="last_opened_file_path" value="$USER_HOME$/Game 5" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -361,8 +377,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="698" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48767605" visible="true" weight="0.22651514" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48767605" visible="true" weight="0.22651514" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -371,7 +388,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.50176054" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32922536" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.346831" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.346831" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.50176054" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -531,23 +548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MenuGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MenuGUI2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/icons/rsz_hero.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -634,22 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/species/units/Bowman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="107" selection-start-line="10" selection-start-column="107" selection-end-line="10" selection-end-column="107" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/buildings/Bank.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -688,10 +672,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MenuGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MenuGUI2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/species/units/Bowman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/species/units/Catapult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="114" selection-start-line="9" selection-start-column="114" selection-end-line="9" selection-end-column="114" />
+        <state relative-caret-position="240">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -700,22 +714,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/species/units/Healer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="115" selection-start-line="10" selection-start-column="115" selection-end-line="10" selection-end-column="115" />
+        <state relative-caret-position="150">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/species/units/Hero.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="102" selection-start-line="15" selection-start-column="102" selection-end-line="15" selection-end-column="102" />
+        <state relative-caret-position="196">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/species/units/Warrior.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="110" selection-start-line="9" selection-start-column="110" selection-end-line="9" selection-end-column="110" />
+        <state relative-caret-position="240">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

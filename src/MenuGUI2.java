@@ -50,6 +50,7 @@ public class MenuGUI2 extends JFrame {
                 String start = e.getActionCommand();
                 if (start.equals("start")) {
                     getDefaultCloseOperation();
+                    setVisible(false);
                     FlowCraftGUI window = new FlowCraftGUI(name, specie, player2.getText(), specie2);
                     window.setVisible(true);
                 }

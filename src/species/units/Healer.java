@@ -23,7 +23,7 @@ public class Healer extends GameTableCell {
 
     @Override
     public boolean canMoveOutOfAxis() {
-        return true;
+        return false;
     }
 
     public void healing(Position position) {

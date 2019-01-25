@@ -48,6 +48,7 @@ public class MenuGUI extends JFrame {
                 String command = e.getActionCommand();
                 if (command.equals("start")) {
                     getDefaultCloseOperation();
+                    setVisible(false);
                     MenuGUI2 window = new MenuGUI2(player1.getText(), specie);
                     window.setVisible(true);
                 }

@@ -23,6 +23,6 @@ public class Bowman extends GameTableCell {
 
     @Override
     public boolean canMoveOutOfAxis() {
-        return true;
+        return false;
     }
 }
