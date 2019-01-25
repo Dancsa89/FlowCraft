@@ -3,10 +3,12 @@ package buildings;
 import interfaces.Player;
 import species.units.GameTableCell;
 
+import javax.swing.*;
+
 public class TownHall extends GameTableCell {
 
     public TownHall(Player owner) {
-        super(owner, "Townhall", 4500, 15, 15, 100);
+        super(owner, "Townhall", 4500, 15, 15, 100, new ImageIcon("/home/dani/FlowCraft/src/icons/rsz_townhall.png"));
     }
 
     @Override

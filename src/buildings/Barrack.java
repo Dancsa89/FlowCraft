@@ -3,10 +3,12 @@ package buildings;
 import interfaces.Player;
 import species.units.GameTableCell;
 
+import javax.swing.*;
+
 public class Barrack extends GameTableCell {
 
     public Barrack(Player owner) {
-        super(owner, "Barrack", 2500, 0, 0, 75);
+        super(owner, "Barrack", 2500, 0, 0, 75, new ImageIcon("/home/dani/FlowCraft/src/icons/rsz_barrack.png"));
     }
 
     @Override

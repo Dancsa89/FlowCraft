@@ -1,10 +1,9 @@
+import buildings.*;
 import interfaces.Player;
 import interfaces.Position;
 import interfaces.Range;
 import interfaces.TableContract;
-import species.units.Bowman;
-import species.units.GameTableCell;
-import species.units.Hero;
+import species.units.*;
 import table.GameTable;
 
 import javax.swing.*;
@@ -109,8 +108,8 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
                 btn.setOpaque(true);
                 layoutButtons.add(btn);
                 GameTableCell unitOrBuilding = gameField[i][j];
-                if (unitOrBuilding != null) {
-                    btn.setText(unitOrBuilding.toString());
+                if (unitOrBuilding instanceof Hero) {
+                    btn.setIcon(new ImageIcon(getClass().getResource("./icons/rsz_hero.png")));
                 }
                 removeHighlight();
             }
@@ -133,7 +132,7 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
     public void updateCellItem(Position position, GameTableCell cellItem) {
         JButton btn = (JButton) layoutButtons.getComponent(position.x * 10 + position.y);
 
-        btn.setText(cellItem != null ? cellItem.toString() : null);
+        btn.setIcon(cellItem != null ? cellItem.iconBack() : null);
     }
 
     @Override
@@ -218,7 +217,7 @@ public class FlowCraftGUI extends JFrame implements TableContract.View { // VIEW
         for (Position position : positions) {
             JButton btn = (JButton) layoutButtons.getComponent(position.x * 10 + position.y);
 
-            btn.setBackground(Color.CYAN);
+            btn.setBackground(Color.BLUE);
         }
     }
 

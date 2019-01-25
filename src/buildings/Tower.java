@@ -3,10 +3,12 @@ package buildings;
 import interfaces.Player;
 import species.units.GameTableCell;
 
+import javax.swing.*;
+
 public class Tower extends GameTableCell {
 
     public Tower(Player owner) {
-        super(owner, "Tower", 1000, 20, 20, 40);
+        super(owner, "Tower", 1000, 20, 20, 40, new ImageIcon("/home/dani/FlowCraft/src/icons/rsz_fortress_tower.png"));
     }
 
     @Override

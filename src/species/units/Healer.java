@@ -3,10 +3,12 @@ package species.units;
 import interfaces.Player;
 import interfaces.Position;
 
+import javax.swing.*;
+
 public class Healer extends GameTableCell {
 
     public Healer(Player owner) {
-        super(owner, "Healer", 150, 35, 35, 40);
+        super(owner, "Healer", 150, 35, 35, 40, new ImageIcon("/home/dani/FlowCraft/src/icons/rsz_red_cross-512.png"));
     }
 
     @Override

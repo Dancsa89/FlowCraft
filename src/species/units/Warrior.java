@@ -2,10 +2,12 @@ package species.units;
 
 import interfaces.Player;
 
+import javax.swing.*;
+
 public class Warrior extends GameTableCell {
 
     public Warrior(Player owner) {
-        super(owner, "Warrior", 500, 50, 50, 25);
+        super(owner, "Warrior", 500, 50, 50, 25, new ImageIcon("/home/dani/FlowCraft/src/icons/rsz_warrior.png"));
     }
 
     @Override

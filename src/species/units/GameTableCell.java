@@ -13,15 +13,16 @@ public abstract class GameTableCell {
     private int damage;
     private final int originalDamage;
     private final int price;
-    private Icon icon;
+    private ImageIcon icon;
 
-    public GameTableCell(Player owner, String title, int life, int damage, int originalDamage, int price) {
+    public GameTableCell(Player owner, String title, int life, int damage, int originalDamage, int price, ImageIcon icon) {
         this.owner = owner;
         this.title = title;
         this.life = life;
         this.damage = damage;
         this.price = price;
         this.originalDamage = originalDamage;
+        this.icon = icon;
     }
 
     public abstract boolean isMovable();
@@ -58,8 +59,8 @@ public abstract class GameTableCell {
         this.damage = this.originalDamage;
     }
 
-    public String toString() {
-        return title.charAt(0) + "_" + owner.getName().charAt(0);
+    public ImageIcon iconBack() {
+        return icon;
     }
 
     public String cellInfo() { return "Title:" + " " + title + "\n\r"

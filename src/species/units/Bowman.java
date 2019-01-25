@@ -6,8 +6,9 @@ import javax.swing.*;
 
 public class Bowman extends GameTableCell {
 
+
     public Bowman(Player owner) {
-        super(owner, "Bowman", 250, 25, 25,15);
+        super(owner, "Bowman", 250, 25, 25,15, new ImageIcon("/home/dani/FlowCraft/src/icons/rsz_archer.png"));
     }
 
     @Override
